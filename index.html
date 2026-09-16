@@ -98,8 +98,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <!-- TAB 1: SHEET "Beranda" -->
     <section id="view-beranda" class="sheet-view">
       <div style="margin-bottom: 28px;">
-        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">Selamat Datang di Kanal BAPOLES</h2>
-        <p style="color: var(--text-sub);">Media komunikasi edukatif Ba'omong Pola Hidup Sehat Dinas Kesehatan Provinsi NTT.</p>
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">Selamat Datang di Kanal OC</h2>
+        <p style="color: var(--text-sub);">Media komunikasi edukatif BAPOLES (Ba'omong Pola Hidup Sehat) Dinas Kesehatan Provinsi NTT.</p>
       </div>
 
       <!-- Category Filter Bar -->
@@ -380,11 +380,24 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           </button>
         ` : '';
 
+        const thumbImg = item.foto || (item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : '');
+
+        const thumbHtml = thumbImg ? `
+          <div class="video-thumb-box" onclick="openLiveVideo('${escapeHtml(item.youtubeLink)}', '${escapeHtml(item.materi)}')">
+            <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" onerror="this.src='LOGO utama.jpeg'">
+            <div class="play-icon-overlay">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="eps-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">Eps. ${item.no}</span>
+          </div>
+        ` : '';
+
         return `
           <div class="episode-card">
             <div>
+              ${thumbHtml}
               <div class="card-header-top">
-                <span class="eps-tag">Eps. ${item.no}</span>
+                ${!thumbImg ? `<span class="eps-tag">Eps. ${item.no}</span>` : ''}
                 <span class="cat-tag">${escapeHtml(item.kategori || 'Umum')}</span>
               </div>
               <h3 class="card-topic">${escapeHtml(item.materi)}</h3>
