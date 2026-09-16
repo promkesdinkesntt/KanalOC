@@ -448,5 +448,12 @@ window.BAPOLES_DATA = {
         "Host: Secilia Lindawati Leo, S.Farm."
       ]
     }
-  ]
+  ],
+  "kontak": {
+    "Whatsapp": "085182697288",
+    "Instagram": "@dinkesntt",
+    "Tiktok": "@dinkesntt",
+    "X": "@dinkesntt",
+    "Facebook": "@dinkesntt"
+  }
 };
