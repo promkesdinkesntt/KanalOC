@@ -85,8 +85,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           <div class="stat-label">Narasumber & Host</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number" id="stat-sheets-num">6</div>
-          <div class="stat-label">Sheet Terhubung</div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Akses Gratis Publik</div>
         </div>
       </div>
     </div>
@@ -295,38 +295,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           <a href="https://drive.google.com/drive/folders/1MY3kMtoTon8vhPjuMKHLamw-Swa_M_zE?usp=sharing" target="_blank" class="btn-play-video" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">
             📁 Buka Google Drive Folder
           </a>
-          <a href="https://docs.google.com/spreadsheets/d/1TL3a0J1u0Ah63c9G6Yufb4HTMXd5J-XvYOMEbnsu9YE/edit?gid=406363194#gid=406363194" target="_blank" class="btn-play-video" style="background: linear-gradient(135deg, #10b981, #059669);">
-            📊 Buka Google Sheet (LINK BAPOLES)
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- TAB 7: SHEET "Excel Live Viewer" -->
-    <section id="view-excel-live" class="sheet-view" style="display: none;">
-      <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">📊 Embedded Sheet Excel Live (LINK BAPOLES)</h2>
-          <p style="color: var(--text-sub);">Tampilan langsung spreadsheet Google Sheets / Excel yang terhubung secara realtime.</p>
-        </div>
-        <div style="display: flex; gap: 10px;">
-          <button onclick="reloadExcelIframe()" class="btn-play-video" style="background: #e2e8f0; border: 1px solid #cbd5e1; color: #334155;">
-            🔄 Refresh Data
-          </button>
-          <a href="https://docs.google.com/spreadsheets/d/1TL3a0J1u0Ah63c9G6Yufb4HTMXd5J-XvYOMEbnsu9YE/edit?gid=406363194#gid=406363194" target="_blank" class="btn-play-video" style="background: linear-gradient(135deg, #10b981, #059669);">
-            ↗️ Buka Google Sheet Asli
-          </a>
-        </div>
-      </div>
 
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); overflow: hidden; height: 680px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
-        <iframe id="excel-iframe-viewer" 
-                src="https://docs.google.com/spreadsheets/d/1TL3a0J1u0Ah63c9G6Yufb4HTMXd5J-XvYOMEbnsu9YE/pubhtml?widget=true&headers=false" 
-                style="width: 100%; height: 100%; border: none;"
-                allowfullscreen>
-        </iframe>
-      </div>
-    </section>
 
   </main>
 
@@ -531,13 +504,6 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     function escapeHtml(str) {
       if (!str) return '';
       return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-
-    function reloadExcelIframe() {
-      const iframe = document.getElementById('excel-iframe-viewer');
-      if (iframe) {
-        iframe.src = iframe.src;
-      }
     }
   </script>
 </body>
