@@ -292,12 +292,12 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         <p style="color: var(--text-sub);">Struktur kepengurusan resmi dari data Excel Sheet <em>Tim Kami</em> — Dinas Kesehatan Provinsi NTT.</p>
       </div>
 
-      <!-- 1. Tim BAPOLES (Pimpinan) -->
+      <!-- 1. Pimpinan & Pengarah -->
       <div class="team-unit-block">
         <div class="team-unit-header">
           <div class="team-unit-icon">🏛️</div>
           <div>
-            <h3 class="team-unit-title">Tim BAPOLES (Pimpinan & Pengarah)</h3>
+            <h3 class="team-unit-title">Pimpinan & Pengarah</h3>
             <p class="team-unit-desc">Pimpinan Dinas Kesehatan Provinsi NTT pembina dan pengarah program edukasi BAPOLES.</p>
           </div>
         </div>
@@ -338,20 +338,6 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           </div>
         </div>
         <div id="tim-multimedia-container">
-          <!-- Rendered via JS -->
-        </div>
-      </div>
-
-      <!-- 4. Speakers Directory -->
-      <div class="team-unit-block">
-        <div class="team-unit-header">
-          <div class="team-unit-icon">👨‍⚕️</div>
-          <div>
-            <h3 class="team-unit-title">Narasumber Spesialis & Host Podcast</h3>
-            <p class="team-unit-desc">Dokter spesialis, psikolog klinis, perawat jiwa, dan host yang telah berbagi ilmu di 31 episode BAPOLES.</p>
-          </div>
-        </div>
-        <div class="episodes-grid" id="tim-kami-grid-container">
           <!-- Rendered via JS -->
         </div>
       </div>
@@ -486,12 +472,23 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       if (document.getElementById('stat-episodes-num')) {
         document.getElementById('stat-episodes-num').innerText = podcastsData.length;
       }
+
+      // Calculate Total Speakers for Hero Stats
+      const speakerSet = new Set();
+      podcastsData.forEach(p => {
+        (p.narasumber || []).forEach(n => {
+          const clean = n.replace(/^(Host|Narasumber|Psikolog Klinis|Perawat Jiwa)\s*:\s*/i, '').trim();
+          if (clean) speakerSet.add(clean);
+        });
+      });
+      const spEl = document.getElementById('stat-speakers-num');
+      if (spEl) spEl.innerText = `${speakerSet.size}+`;
+
       renderPodcastGrid('beranda-grid-container', podcastsData);
       renderPodcastGrid('katalog-grid-container', podcastsData);
       renderPodcastGrid('jadwal-grid-container', podcastsData.slice(0, 6));
       renderJadwalAgenda();
       renderTimUnits();
-      renderTimKami(podcastsData);
     });
 
     // 6 Sheet Menu Switcher
@@ -726,37 +723,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       }).join('');
     }
 
-    // Render Tim Kami Directory
-    function renderTimKami(podcasts) {
-      const speakerMap = {};
-      podcasts.forEach(p => {
-        p.narasumber.forEach(n => {
-          const cleanName = n.replace(/^(Host|Narasumber|Psikolog Klinis|Perawat Jiwa)\s*:\s*/i, '').trim();
-          if (!speakerMap[cleanName]) {
-            speakerMap[cleanName] = { name: cleanName, raw: n, episodes: [] };
-          }
-          speakerMap[cleanName].episodes.push(p.no);
-        });
-      });
 
-      const container = document.getElementById('tim-kami-grid-container');
-      if (!container) return;
-      const sorted = Object.values(speakerMap).sort((a, b) => b.episodes.length - a.episodes.length);
-
-      container.innerHTML = sorted.map(s => `
-        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 20px; display: flex; align-items: center; gap: 16px;">
-          <div style="width:48px; height:48px; border-radius:50%; background:rgba(56, 189, 248, 0.15); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem;">
-            ${getInitials(s.name)}
-          </div>
-          <div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 2px;">${escapeHtml(s.name)}</h4>
-            <div style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">${s.episodes.length} Episode Broadcast</div>
-          </div>
-        </div>
-      `).join('');
-
-      document.getElementById('stat-speakers-num').innerText = `${sorted.length}+`;
-    }
 
     // Video Player Modal
     function openLiveVideo(url, title) {
