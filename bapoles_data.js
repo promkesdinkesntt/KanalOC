@@ -119,7 +119,7 @@ window.BAPOLES_DATA = {
     },
     {
       "no": 8,
-      "kategori": "Laboratorium Kesehatan",
+      "kategori": "UPTD Labkes",
       "materi": "Di balik hasil akurat: cerita dari Laboratorium",
       "youtubeLink": "https://www.youtube.com/live/HOHhMrWAsWA?si=i0LE0WZ5_J_rrm48",
       "youtubeId": "HOHhMrWAsWA",
@@ -403,7 +403,7 @@ window.BAPOLES_DATA = {
     },
     {
       "no": 27,
-      "kategori": "Pelatihan Tenaga Kesehatan",
+      "kategori": "UPTD Latnakes",
       "materi": "Meng-upgrade Kompetensi Tenaga Kesehatan Bersama UPTD Pelatihan Tenaga Kesehatan Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://www.youtube.com/live/LZMKoJwDlH4?si=any0p9QBVNLHIdoh",
       "youtubeId": "LZMKoJwDlH4",
@@ -591,7 +591,7 @@ window.BAPOLES_DATA = {
     },
     {
       "no": 8,
-      "kategori": "Laboratorium Kesehatan",
+      "kategori": "UPTD Labkes",
       "materi": "Di balik hasil akurat: cerita dari Laboratorium",
       "youtubeLink": "https://www.youtube.com/live/HOHhMrWAsWA?si=i0LE0WZ5_J_rrm48",
       "youtubeId": "HOHhMrWAsWA",
@@ -875,7 +875,7 @@ window.BAPOLES_DATA = {
     },
     {
       "no": 27,
-      "kategori": "Pelatihan Tenaga Kesehatan",
+      "kategori": "UPTD Latnakes",
       "materi": "Meng-upgrade Kompetensi Tenaga Kesehatan Bersama UPTD Pelatihan Tenaga Kesehatan Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://www.youtube.com/live/LZMKoJwDlH4?si=any0p9QBVNLHIdoh",
       "youtubeId": "LZMKoJwDlH4",
