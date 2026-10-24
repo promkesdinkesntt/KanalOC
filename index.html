@@ -37,8 +37,8 @@
         <a class="nav-link" id="menu-jadwal-podcast" onclick="switchSheetTab('jadwal-podcast')">
           📅 Jadwal podcast
         </a>
-        <a class="nav-link" id="menu-galeri-podcast" onclick="switchSheetTab('galeri-podcast')">
-          🎙️ Galeri Podcast
+        <a class="nav-link" id="menu-katalog-podcast" onclick="switchSheetTab('katalog-podcast')">
+          🎙️ Katalog Podcast
         </a>
         <a class="nav-link" id="menu-tentang" onclick="switchSheetTab('tentang')">
           ℹ️ Tentang
@@ -77,7 +77,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       <!-- Quick Interactive Stats Card -->
       <div class="hero-stats-card">
         <div class="stat-box">
-          <div class="stat-number" id="stat-episodes-num">29</div>
+          <div class="stat-number" id="stat-episodes-num">31</div>
           <div class="stat-label">Episode Broadcast</div>
         </div>
         <div class="stat-box">
@@ -97,21 +97,28 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
     <!-- TAB 1: SHEET "Beranda" -->
     <section id="view-beranda" class="sheet-view">
-      <div style="margin-bottom: 28px;">
-        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">Selamat Datang di Kanal OC</h2>
-        <p style="color: var(--text-sub);">Media komunikasi edukatif BAPOLES (Ba'omong Pola Hidup Sehat) Dinas Kesehatan Provinsi NTT.</p>
+      <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <div>
+          <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">Selamat Datang di Kanal OC</h2>
+          <p style="color: var(--text-sub);">Media komunikasi edukatif BAPOLES (Ba'omong Pola Hidup Sehat) Dinas Kesehatan Provinsi NTT.</p>
+        </div>
+        <!-- Survei Kepuasan BAPOLES Badge -->
+        <a href="#view-beranda" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: #e0f2fe; border: 1.5px solid #bae6fd; padding: 8px 16px; border-radius: var(--radius-pill); color: #0284c7; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); transition: var(--transition);">
+          <span>📋</span> Survei Kepuasan BAPOLES
+        </a>
       </div>
 
       <!-- Category Filter Bar -->
       <div class="category-filter-bar">
         <button class="cat-pill active" onclick="filterCategory('ALL', this)">✨ Semua Podcast</button>
-        <button class="cat-pill" onclick="filterCategory('cancer', this)">🎗️ Cancer Awareness</button>
+        <button class="cat-pill" onclick="filterCategory('mitra', this)">🤝 Mitra & Kanker</button>
         <button class="cat-pill" onclick="filterCategory('RSKD Jiwa', this)">🧠 RSKD Jiwa Naimata</button>
         <button class="cat-pill" onclick="filterCategory('Pencegahan', this)">🛡️ P2P (Pengendalian Penyakit)</button>
         <button class="cat-pill" onclick="filterCategory('Pelayanan Kesehatan', this)">🏥 Yankes</button>
         <button class="cat-pill" onclick="filterCategory('Tenaga Kesehatan', this)">👩‍⚕️ Nakes</button>
         <button class="cat-pill" onclick="filterCategory('Kesehatan Masyarakat', this)">👶 Kesmas</button>
-        <button class="cat-pill" onclick="filterCategory('Laboratorium', this)">🔬 Lab & Pelatihan</button>
+        <button class="cat-pill" onclick="filterCategory('laboratorium', this)">🔬 Lab & Pelatihan</button>
+        <button class="cat-pill" onclick="filterCategory('Sekretariat', this)">🏛️ Sekretariat</button>
       </div>
 
       <div class="episodes-grid" id="beranda-grid-container">
@@ -123,44 +130,52 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <section id="view-jadwal-podcast" class="sheet-view" style="display: none;">
       <div style="margin-bottom: 28px;">
         <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">📅 Jadwal Podcast BAPOLES</h2>
-        <p style="color: var(--text-sub);">Informasi agenda dan jadwal penayangan live podcast edukasi kesehatan.</p>
+        <p style="color: var(--text-sub);">Informasi agenda dan jadwal resmi penayangan live podcast edukasi kesehatan Dinas Kesehatan Prov. NTT.</p>
       </div>
 
-      <div class="about-card">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+      <div class="about-card" style="margin-bottom: 32px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 22px;">
           <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(56, 189, 248, 0.15); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📅</div>
           <div>
-            <h3 style="font-size: 1.15rem; color: var(--text-main);">Agenda Penayangan Podcast 2026</h3>
-            <p style="font-size: 0.85rem; color: var(--text-sub);">Penayangan rutin setiap pekan di YouTube Live Dinas Kesehatan Prov. NTT</p>
+            <h3 style="font-size: 1.15rem; color: var(--text-main);">Agenda Penayangan Resmi (Jadwal Podcast)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-sub);">Jadwal giliran penayangan UPTD, Bidang, dan Sekretariat Dinas Kesehatan Prov. NTT</p>
           </div>
         </div>
 
+        <div id="jadwal-agenda-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: var(--text-main);">🎬 Tayangan Terpopuler & Terbaru</h3>
         <div class="episodes-grid" id="jadwal-grid-container">
           <!-- Rendered via JS -->
         </div>
       </div>
     </section>
 
-    <!-- TAB 3: SHEET "Galeri Podcast" -->
-    <section id="view-galeri-podcast" class="sheet-view" style="display: none;">
+    <!-- TAB 3: SHEET "Katalog Podcast" -->
+    <section id="view-katalog-podcast" class="sheet-view" style="display: none;">
       <div style="margin-bottom: 28px;">
-        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">🎙️ Galeri Podcast BAPOLES</h2>
-        <p style="color: var(--text-sub);">Koleksi siaran live podcast kesehatan terdaftar dari Sheet <em>Galeri Podcast</em>.</p>
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">🎙️ Katalog Podcast BAPOLES</h2>
+        <p style="color: var(--text-sub);">Koleksi lengkap 31 siaran live podcast kesehatan terdaftar dari Sheet <em>Katalog Podcast</em>.</p>
       </div>
 
       <!-- Category Filter Bar -->
       <div class="category-filter-bar">
-        <button class="cat-pill active" onclick="filterCategory('ALL', this)">✨ Semua Galeri</button>
-        <button class="cat-pill" onclick="filterCategory('cancer', this)">🎗️ Cancer Awareness</button>
+        <button class="cat-pill active" onclick="filterCategory('ALL', this)">✨ Semua Katalog</button>
+        <button class="cat-pill" onclick="filterCategory('mitra', this)">🤝 Mitra & Kanker</button>
         <button class="cat-pill" onclick="filterCategory('RSKD Jiwa', this)">🧠 RSKD Jiwa Naimata</button>
         <button class="cat-pill" onclick="filterCategory('Pencegahan', this)">🛡️ P2P (Pengendalian Penyakit)</button>
         <button class="cat-pill" onclick="filterCategory('Pelayanan Kesehatan', this)">🏥 Yankes</button>
         <button class="cat-pill" onclick="filterCategory('Tenaga Kesehatan', this)">👩‍⚕️ Nakes</button>
         <button class="cat-pill" onclick="filterCategory('Kesehatan Masyarakat', this)">👶 Kesmas</button>
-        <button class="cat-pill" onclick="filterCategory('Laboratorium', this)">🔬 Lab & Pelatihan</button>
+        <button class="cat-pill" onclick="filterCategory('laboratorium', this)">🔬 Lab & Pelatihan</button>
+        <button class="cat-pill" onclick="filterCategory('Sekretariat', this)">🏛️ Sekretariat</button>
       </div>
 
-      <div class="episodes-grid" id="galeri-grid-container">
+      <div class="episodes-grid" id="katalog-grid-container">
         <!-- Rendered via JS -->
       </div>
     </section>
@@ -213,11 +228,23 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <section id="view-tim-kami" class="sheet-view" style="display: none;">
       <div style="margin-bottom: 28px;">
         <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">👥 Tim Kami & Narasumber Spesialis</h2>
-        <p style="color: var(--text-sub);">Daftar dokter spesialis, psikolog klinis, perawat jiwa, dan pembawa acara Kanal BAPOLES.</p>
+        <p style="color: var(--text-sub);">Unit pengelola Kanal BAPOLES serta daftar dokter spesialis, perawat jiwa, psikolog, dan host.</p>
       </div>
 
-      <div class="episodes-grid" id="tim-kami-grid-container">
-        <!-- Rendered via JS -->
+      <!-- Core Units from Excel -->
+      <div style="margin-bottom: 36px;">
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">🏢 Unit Pengelola Kanal BAPOLES</h3>
+        <div id="tim-units-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Speakers Directory -->
+      <div>
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">👨‍⚕️ Narasumber Spesialis & Host</h3>
+        <div class="episodes-grid" id="tim-kami-grid-container">
+          <!-- Rendered via JS -->
+        </div>
       </div>
     </section>
 
@@ -289,10 +316,19 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             <span style="font-size: 0.78rem; font-weight: 600; color: #b91c1c; background: #fee2e2; padding: 4px 12px; border-radius: 20px;">▶ Channel YouTube</span>
           </a>
 
+          <!-- Website Resmi -->
+          <a href="https://dinaskesehatan.nttprov.go.id" target="_blank" style="text-decoration: none; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: var(--radius-md); padding: 22px 18px; text-align: center; transition: var(--transition); box-shadow: 0 4px 16px rgba(2, 132, 199, 0.08);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+            <div style="width: 52px; height: 52px; margin: 0 auto 12px auto; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#0284c7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <h4 style="color: var(--text-main); font-weight: 700; margin-bottom: 4px; font-size: 1.05rem;">Website Resmi</h4>
+            <p style="color: #0284c7; font-weight: 800; font-size: 1.05rem; margin-bottom: 8px;">dinaskesehatan.nttprov.go.id</p>
+            <span style="font-size: 0.78rem; font-weight: 600; color: #0369a1; background: #e0f2fe; padding: 4px 12px; border-radius: 20px;">🌐 Kunjungi Portal</span>
+          </a>
+
+        </div>
       </div>
     </section>
-
-
 
   </main>
 
@@ -301,7 +337,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <div class="modal-window">
       <div class="modal-header-bar">
         <h3 id="modal-video-title" style="font-size: 1.05rem; color: var(--text-main);">Live Streaming BAPOLES</h3>
-        <button class="modal-close-btn" onclick="closeVideoModal()" style="background:none; border:none; color:#fff; font-size:1.6rem; cursor:pointer;">&times;</button>
+        <button class="modal-close-btn" onclick="closeVideoModal()" style="background:none; border:none; color:var(--text-main); font-size:1.6rem; cursor:pointer;">&times;</button>
       </div>
       <div class="iframe-wrapper">
         <iframe id="youtube-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -314,7 +350,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 12px;">
       <img src="LOGO utama.jpeg" alt="BAPOLES" style="height: 44px; border-radius: 8px;" onerror="this.src='https://ui-avatars.com/api/?name=Bapoles&background=0284c7&color=fff'">
       <p>© 2026 Dinas Kesehatan Provinsi NTT - Kanal OC - BAPOLES (Ba'omong Pola Hidup Sehat)</p>
-      <p style="font-size: 0.8rem; color: var(--text-muted);">6 Menu Sheet: Beranda | Jadwal podcast | Galeri Podcast | Tentang | Tim Kami | Kontak</p>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">6 Menu Sheet: Beranda | Jadwal podcast | Katalog Podcast | Tentang | Tim Kami | Kontak</p>
     </div>
   </footer>
 
@@ -322,26 +358,32 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
   <script>
     let activeSheet = 'beranda';
     let activeCategory = 'ALL';
-    let podcastsData = window.BAPOLES_DATA ? window.BAPOLES_DATA.galeriPodcast : [];
+    let podcastsData = window.BAPOLES_DATA ? (window.BAPOLES_DATA.katalogPodcast || window.BAPOLES_DATA.galeriPodcast || []) : [];
 
     document.addEventListener('DOMContentLoaded', () => {
       if (document.getElementById('stat-episodes-num')) {
         document.getElementById('stat-episodes-num').innerText = podcastsData.length;
       }
       renderPodcastGrid('beranda-grid-container', podcastsData);
-      renderPodcastGrid('galeri-grid-container', podcastsData);
+      renderPodcastGrid('katalog-grid-container', podcastsData);
       renderPodcastGrid('jadwal-grid-container', podcastsData.slice(0, 6));
+      renderJadwalAgenda();
+      renderTimUnits();
       renderTimKami(podcastsData);
     });
 
     // 6 Sheet Menu Switcher
     function switchSheetTab(sheetKey) {
+      if (sheetKey === 'galeri-podcast') sheetKey = 'katalog-podcast';
       activeSheet = sheetKey;
       document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sheet-view').forEach(el => el.style.display = 'none');
 
-      document.getElementById(`menu-${sheetKey}`).classList.add('active');
-      document.getElementById(`view-${sheetKey}`).style.display = 'block';
+      const menuEl = document.getElementById(`menu-${sheetKey}`) || document.getElementById(`menu-katalog-podcast`);
+      if (menuEl) menuEl.classList.add('active');
+
+      const viewEl = document.getElementById(`view-${sheetKey}`) || document.getElementById(`view-katalog-podcast`);
+      if (viewEl) viewEl.style.display = 'block';
     }
 
     // Category Filter
@@ -350,6 +392,18 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       document.querySelectorAll('.cat-pill').forEach(el => el.classList.remove('active'));
       btn.classList.add('active');
       handleGlobalSearch();
+    }
+
+    // Category Match Helper
+    function matchCategory(p, cat) {
+      if (!cat || cat === 'ALL') return true;
+      const c = cat.toLowerCase();
+      const pCat = (p.kategori || '').toLowerCase();
+      const pMat = (p.materi || '').toLowerCase();
+
+      if (c === 'mitra') return pCat.includes('mitra') || pCat.includes('cancer') || pMat.includes('kanker');
+      if (c === 'laboratorium') return pCat.includes('laboratorium') || pCat.includes('pelatihan');
+      return pCat.includes(c);
     }
 
     // Global Search
@@ -362,13 +416,62 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           p.kategori.toLowerCase().includes(query) ||
           p.narasumber.some(n => n.toLowerCase().includes(query));
 
-        const matchC = activeCategory === 'ALL' || p.kategori.toLowerCase().includes(activeCategory.toLowerCase());
+        const matchC = matchCategory(p, activeCategory);
 
         return matchQ && matchC;
       });
 
       renderPodcastGrid('beranda-grid-container', filtered);
-      renderPodcastGrid('galeri-grid-container', filtered);
+      renderPodcastGrid('katalog-grid-container', filtered);
+    }
+
+    // Render Jadwal Agenda Table
+    function renderJadwalAgenda() {
+      const container = document.getElementById('jadwal-agenda-container');
+      if (!container) return;
+      const jadwal = window.BAPOLES_DATA ? window.BAPOLES_DATA.jadwalPodcast : [];
+      if (!jadwal || jadwal.length === 0) return;
+
+      container.innerHTML = jadwal.map(item => `
+        <div style="background: #ffffff; border: 1.5px solid var(--border-glass); border-radius: var(--radius-md); padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.05); transition: var(--transition);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 38px; height: 38px; border-radius: 10px; background: #e0f2fe; color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0;">
+              ${item.no}
+            </div>
+            <div>
+              <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--text-main); margin-bottom: 2px;">${escapeHtml(item.bidang)}</h4>
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">Live Streaming Podcast</span>
+            </div>
+          </div>
+          <div style="text-align: right; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 6px 12px; border-radius: var(--radius-pill); flex-shrink: 0;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #16a34a; white-space: nowrap;">📅 ${escapeHtml(item.tanggal)}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Tim Kami Core Units
+    function renderTimUnits() {
+      const container = document.getElementById('tim-units-container');
+      if (!container) return;
+      const units = window.BAPOLES_DATA ? window.BAPOLES_DATA.timKami : [];
+      if (!units || units.length === 0) return;
+
+      const unitIcons = ['🌟', '📢', '🎬'];
+      const unitBg = ['#e0f2fe', '#dcfce7', '#f3e8ff'];
+      const unitColor = ['#0284c7', '#16a34a', '#9333ea'];
+
+      container.innerHTML = units.map((u, i) => `
+        <div style="background: #ffffff; border: 1.5px solid var(--border-glass); border-radius: var(--radius-md); padding: 22px 20px; display: flex; align-items: center; gap: 16px; box-shadow: 0 4px 16px rgba(2, 132, 199, 0.06);">
+          <div style="width: 50px; height: 50px; border-radius: 14px; background: ${unitBg[i % 3]}; color: ${unitColor[i % 3]}; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            ${unitIcons[i % 3]}
+          </div>
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600;">Unit Kerja Pengelola</span>
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main); margin-top: 2px;">${escapeHtml(u)}</h4>
+          </div>
+        </div>
+      `).join('');
     }
 
     // Render Podcast Cards
