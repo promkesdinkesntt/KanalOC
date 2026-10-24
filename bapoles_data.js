@@ -9,7 +9,7 @@ window.BAPOLES_DATA = {
   ],
   "beranda": {
     "surveiTitle": "SURVEI KEPUASAN BAPOLES",
-    "surveiImage": "assets/images/image1.png",
+    "surveiImage": "image1.png",
     "brand": "KANAL OC",
     "tagline": "Satu Klik, Ribuan Cerita",
     "surveiStats": {
@@ -27,19 +27,19 @@ window.BAPOLES_DATA = {
         "nama": "Ruth D. Laiskodat, S.Si, Apt., MM",
         "jabatan": "Kepala Dinas Kesehatan Provinsi NTT",
         "role": "Pengarah & Pembina Program BAPOLES",
-        "foto": "assets/images/image29.jpeg"
+        "foto": "image29.jpeg"
       },
       {
         "nama": "Fransiskus A. Wotan, S.Sos",
         "jabatan": "Sekretaris Dinas Kesehatan Provinsi NTT",
         "role": "Sekretaris & Penanggung Jawab Administrasi",
-        "foto": "assets/images/image42.png"
+        "foto": "image42.png"
       },
       {
         "nama": "Damiana V. Djahari, SKM, M.Kes",
         "jabatan": "Kepala Bidang Kesehatan Masyarakat",
         "role": "Koordinator Bidang Promosi Kesehatan & Kesmas",
-        "foto": "assets/images/image30.jpeg"
+        "foto": "image30.jpeg"
       }
     ],
     "timkerPromkes": {
@@ -48,65 +48,65 @@ window.BAPOLES_DATA = {
         "nama": "Christiani J.F.L.R. Goring, SKM",
         "jabatan": "Ketua Timker Promosi Kesehatan dan Pemberdayaan Mayarakat",
         "role": "Ketua Tim Kerja",
-        "foto": "assets/images/image31.jpeg"
+        "foto": "image31.jpeg"
       },
       "anggota": [
         {
           "nama": "Filmon Banunaek, S.Kom, MM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image33.jpeg"
+          "foto": "image33.jpeg"
         },
         {
           "nama": "Sutarmi, Amd.KL",
           "role": "Anggota Timker",
-          "foto": "assets/images/image32.jpeg"
+          "foto": "image32.jpeg"
         },
         {
           "nama": "Oma Bureni, SKM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image34.jpeg"
+          "foto": "image34.jpeg"
         },
         {
           "nama": "Meilia Rohmawati, A.Md.Keb",
           "role": "Anggota Timker",
-          "foto": "assets/images/image35.jpeg"
+          "foto": "image35.jpeg"
         },
         {
           "nama": "Farah Murwitasari, A.Md.Kes",
           "role": "Anggota Timker",
-          "foto": "assets/images/image36.jpeg"
+          "foto": "image36.jpeg"
         },
         {
           "nama": "Helen S. Lape, S.KM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image37.jpeg"
+          "foto": "image37.jpeg"
         },
         {
           "nama": "Indhira M. Raga, S.KM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image38.jpeg"
+          "foto": "image38.jpeg"
         },
         {
           "nama": "Ronaldy C. H. B Tjadu Hina, S.KM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image39.jpeg"
+          "foto": "image39.jpeg"
         },
         {
           "nama": "Mathelda Esterina, S.KM",
           "role": "Anggota Timker",
-          "foto": "assets/images/image40.jpeg"
+          "foto": "image40.jpeg"
         },
         {
           "nama": "Widiawati Batjo, A.Md.Keb",
           "role": "Anggota Timker",
-          "foto": "assets/images/image41.jpeg"
+          "foto": "image41.jpeg"
         }
       ]
     },
     "timMultimedia": {
       "title": "Tim Multimedia",
       "deskripsi": "Tim kreatif produksi audio-visual, live broadcasting YouTube, tata artistik, dan operasional teknis podcast Kanal BAPOLES.",
-      "foto": "assets/images/image43.jpeg",
+      "foto": "image43.jpeg",
       "anggota": [
         "Alpredo",
         "Farhan",
@@ -186,7 +186,7 @@ window.BAPOLES_DATA = {
       "materi": "Manajemen Stres dan Pengenalan Alat HRV",
       "youtubeLink": "https://www.youtube.com/live/GOu-wBBaIcw?si=yXHmHpq7S2WLyOLx",
       "youtubeId": "GOu-wBBaIcw",
-      "foto": "assets/images/image2.png",
+      "foto": "image2.png",
       "tanggal": "12 Maret 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -199,7 +199,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara\r\nApa itu kanker payudara dan mengapa bisa terjadi?",
       "youtubeLink": "https://www.youtube.com/live/zICnXyGhbx4?si=abpVTAHSWGS5KcuL",
       "youtubeId": "zICnXyGhbx4",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "9 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -212,7 +212,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker\r\nPencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
       "youtubeLink": "https://www.youtube.com/live/tbMIYu6RyHE?si=Mrg9YD7FNPa-Ujoq",
       "youtubeId": "tbMIYu6RyHE",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "10 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -225,7 +225,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat\r\nTantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
       "youtubeLink": "https://www.youtube.com/live/hpWJpp4sD5Y?si=YnKVx6-1rMbJ_9Gs",
       "youtubeId": "hpWJpp4sD5Y",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "13 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -238,7 +238,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker\r\nGizi Cerdas dan herbal bijak\"",
       "youtubeLink": "https://www.youtube.com/live/JAddHTM2Xi8?si=PO3hKHPz28_JIMVV",
       "youtubeId": "JAddHTM2Xi8",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "14 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -251,7 +251,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan\r\nDukungan keluarga dan kualitas hidup pasien\"",
       "youtubeLink": "https://www.youtube.com/live/lOpLBPT2lqY?si=PTHpd9VCHFmz-1Il",
       "youtubeId": "lOpLBPT2lqY",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "15 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -264,7 +264,7 @@ window.BAPOLES_DATA = {
       "materi": "SKP aman, Praktik nyaman, Kupas tuntas pemenuhan SKP bagi Named Nakes",
       "youtubeLink": "https://www.youtube.com/live/83Of8HQZj58?si=QFSmIuXxkku1YQH-",
       "youtubeId": "83Of8HQZj58",
-      "foto": "assets/images/image4.jpeg",
+      "foto": "image4.jpeg",
       "tanggal": "16 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -277,7 +277,7 @@ window.BAPOLES_DATA = {
       "materi": "Di balik hasil akurat: cerita dari Laboratorium",
       "youtubeLink": "https://www.youtube.com/live/HOHhMrWAsWA?si=i0LE0WZ5_J_rrm48",
       "youtubeId": "HOHhMrWAsWA",
-      "foto": "assets/images/image5.jpeg",
+      "foto": "image5.jpeg",
       "tanggal": "20 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -290,7 +290,7 @@ window.BAPOLES_DATA = {
       "materi": "Mutu Pelayanan di Fasilitas Pelayanan Kesehatan",
       "youtubeLink": "https://www.youtube.com/live/ZImmMAEdPM8?si=Ez9pAXEI1x4A2s6O",
       "youtubeId": "ZImmMAEdPM8",
-      "foto": "assets/images/image6.jpeg",
+      "foto": "image6.jpeg",
       "tanggal": "23 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -303,7 +303,7 @@ window.BAPOLES_DATA = {
       "materi": "Posyandu tangguh, Generasi kuat tanpa stunting",
       "youtubeLink": "https://www.youtube.com/live/wP6z0aWWaKk?si=afsUiYjLcE-3Khfw",
       "youtubeId": "wP6z0aWWaKk",
-      "foto": "assets/images/image7.jpeg",
+      "foto": "image7.jpeg",
       "tanggal": "4 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -316,7 +316,7 @@ window.BAPOLES_DATA = {
       "materi": "Child Grooming",
       "youtubeLink": "https://www.youtube.com/live/LKIRlcQHSUY?si=BuBrIfMbA1eXUkwR",
       "youtubeId": "LKIRlcQHSUY",
-      "foto": "assets/images/image8.jpeg",
+      "foto": "image8.jpeg",
       "tanggal": "21 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -329,7 +329,7 @@ window.BAPOLES_DATA = {
       "materi": "Apoteker Mengawal Obat Aman dan Bermutu Hingga Ke Tangan Anda",
       "youtubeLink": "https://www.youtube.com/live/e5dFZ4ZaMPs?si=MQF_htu62cMMARrQ",
       "youtubeId": "e5dFZ4ZaMPs",
-      "foto": "assets/images/image9.jpeg",
+      "foto": "image9.jpeg",
       "tanggal": "10 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -342,7 +342,7 @@ window.BAPOLES_DATA = {
       "materi": "Terapi Pencegahan Tuberkulosis (TPT) untuk NTT Sehat",
       "youtubeLink": "https://youtu.be/A1rh-7IVNbc?si=BnE1yNSg3IX73LYQ",
       "youtubeId": "A1rh-7IVNbc",
-      "foto": "assets/images/image10.jpeg",
+      "foto": "image10.jpeg",
       "tanggal": "11 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -355,7 +355,7 @@ window.BAPOLES_DATA = {
       "materi": "Peluang Penugasan Khusus ditengah Polemik Regulasi",
       "youtubeLink": "https://www.youtube.com/live/3439wKIWQZ8?si=Rb5vV74_ZHEGdnWw",
       "youtubeId": "3439wKIWQZ8",
-      "foto": "assets/images/image11.jpeg",
+      "foto": "image11.jpeg",
       "tanggal": "15 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -368,7 +368,7 @@ window.BAPOLES_DATA = {
       "materi": "Bicara Sehat Calon Bunda, Topik: Kupas Tuntas Tentang Kehamilan",
       "youtubeLink": "https://www.youtube.com/live/UuPzamTbGao?si=laTp-cXWvZ4mtx9-",
       "youtubeId": "UuPzamTbGao",
-      "foto": "assets/images/image12.jpeg",
+      "foto": "image12.jpeg",
       "tanggal": "17 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -381,7 +381,7 @@ window.BAPOLES_DATA = {
       "materi": "Tugas Perkembangan Anak dan Remaja dalam Hubungan dengan Kesehatan Mental",
       "youtubeLink": "https://www.youtube.com/live/OSJsTWf7TUg?si=7BtiiexDfNtX7HKz",
       "youtubeId": "OSJsTWf7TUg",
-      "foto": "assets/images/image13.jpeg",
+      "foto": "image13.jpeg",
       "tanggal": "18 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -394,7 +394,7 @@ window.BAPOLES_DATA = {
       "materi": "Apa Itu Tuberkulosis (TB) Untuk Masyarakat NTT Yang Sehat",
       "youtubeLink": "https://youtu.be/AHxzMiWTwdE?si=GrlNl2yTBAKTT4dg",
       "youtubeId": "AHxzMiWTwdE",
-      "foto": "assets/images/image14.jpeg",
+      "foto": "image14.jpeg",
       "tanggal": "25 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -407,7 +407,7 @@ window.BAPOLES_DATA = {
       "materi": "Alur Perencanaan dan Penganggaran Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://youtu.be/PPNcwUEWuG4?si=v5A5xE0u7VhTBSEP",
       "youtubeId": "PPNcwUEWuG4",
-      "foto": "assets/images/image15.jpeg",
+      "foto": "image15.jpeg",
       "tanggal": "7 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -420,7 +420,7 @@ window.BAPOLES_DATA = {
       "materi": "CKG dalam Integrasi Layanan Primer",
       "youtubeLink": "https://www.youtube.com/live/QBPhvNmrR6M?si=0dfm53BSaRzEsXrF",
       "youtubeId": "QBPhvNmrR6M",
-      "foto": "assets/images/image16.jpeg",
+      "foto": "image16.jpeg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -433,7 +433,7 @@ window.BAPOLES_DATA = {
       "materi": "Latar Belakang Mengakhiri Hidup Tanpa Stigma",
       "youtubeLink": "https://www.youtube.com/live/C41-0U0kg8w?si=39KDzBunskAMgMEd",
       "youtubeId": "C41-0U0kg8w",
-      "foto": "assets/images/image17.jpeg",
+      "foto": "image17.jpeg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -446,7 +446,7 @@ window.BAPOLES_DATA = {
       "materi": "Bincang-bincang Terkait Praktik Baik Dalam Penanggulangan TBC Tingkat Provinsi",
       "youtubeLink": "https://youtu.be/ccoEP5ez1sY?si=z2Nyf2cec6g5Subr",
       "youtubeId": "ccoEP5ez1sY",
-      "foto": "assets/images/image18.png",
+      "foto": "image18.png",
       "tanggal": "16 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -459,7 +459,7 @@ window.BAPOLES_DATA = {
       "materi": "Sepekan Mengejar Imunisasi untuk Melengkapi Status Imunisasi Anak",
       "youtubeLink": "https://www.youtube.com/live/j1skuMri3io?si=43xzj83TnnEscoNA",
       "youtubeId": "j1skuMri3io",
-      "foto": "assets/images/image19.jpeg",
+      "foto": "image19.jpeg",
       "tanggal": "24 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -472,7 +472,7 @@ window.BAPOLES_DATA = {
       "materi": "Kenali Kusta: Fakta Bukan Mitos",
       "youtubeLink": "https://youtu.be/ULKY-BflyJ4?si=8AO1qc82hYZb5SNy",
       "youtubeId": "ULKY-BflyJ4",
-      "foto": "assets/images/image20.jpeg",
+      "foto": "image20.jpeg",
       "tanggal": "27 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -485,7 +485,7 @@ window.BAPOLES_DATA = {
       "materi": "Hepatitis: Kenali, Cegah, dan Deteksi Dini demi Masyarakat NTT yang Lebih Sehat, Perluas Akses, Perkuat Kolaborasi, Wujudkan Eliminasi Hepatitis",
       "youtubeLink": "https://www.youtube.com/live/RWpWefkwRW8?si=rmi5FaiNjIetGkPu",
       "youtubeId": "RWpWefkwRW8",
-      "foto": "assets/images/image21.jpeg",
+      "foto": "image21.jpeg",
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -498,7 +498,7 @@ window.BAPOLES_DATA = {
       "materi": "Kolaborasi GASING (Gereja Bersih Stunting) x LENTERA EMAS (Langkah Nyata Terpadu AtasiStunting Menuju Generasi Emas)",
       "youtubeLink": "https://www.youtube.com/live/PSojhMOUMx8?si=B6g2yi4ItxP5S8A1",
       "youtubeId": "PSojhMOUMx8",
-      "foto": "assets/images/image22.jpeg",
+      "foto": "image22.jpeg",
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -511,7 +511,7 @@ window.BAPOLES_DATA = {
       "materi": "Bantuan Hidup Dasar (BHD) Langkah Cepat Menyelamatkan Nyawa",
       "youtubeLink": "https://www.youtube.com/live/zZumYi52Ob4?si=dayjT4FAyMwvyPpn",
       "youtubeId": "zZumYi52Ob4",
-      "foto": "assets/images/image23.jpeg",
+      "foto": "image23.jpeg",
       "tanggal": "30 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -524,7 +524,7 @@ window.BAPOLES_DATA = {
       "materi": "Meng-upgrade Kompetensi Tenaga Kesehatan Bersama UPTD Pelatihan Tenaga Kesehatan Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://www.youtube.com/live/LZMKoJwDlH4?si=any0p9QBVNLHIdoh",
       "youtubeId": "LZMKoJwDlH4",
-      "foto": "assets/images/image24.jpeg",
+      "foto": "image24.jpeg",
       "tanggal": "31 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -537,7 +537,7 @@ window.BAPOLES_DATA = {
       "materi": "Harmoni Pelayanan Sinergi Hak dan Kewajiban Tenaga Kesehatan, Tenaga Medis dan Fasilitas Pelayanan Kesehatan",
       "youtubeLink": "https://www.youtube.com/live/DKMQbx25TMY?si=HDGt4Yp4Az1OCjNp",
       "youtubeId": "DKMQbx25TMY",
-      "foto": "assets/images/image25.jpeg",
+      "foto": "image25.jpeg",
       "tanggal": "7 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -550,7 +550,7 @@ window.BAPOLES_DATA = {
       "materi": "Mengawal Generasi Emas NTT, Suara Muda dalam Porta Sapiens dan Riset Air Bersih",
       "youtubeLink": "https://www.youtube.com/live/zSkcu3-jXhM?si=FbbyXszV_H0JgWyj",
       "youtubeId": "zSkcu3-jXhM",
-      "foto": "assets/images/image26.jpeg",
+      "foto": "image26.jpeg",
       "tanggal": "11 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -563,7 +563,7 @@ window.BAPOLES_DATA = {
       "materi": "Pencegahan Stunting dengan Lentera Emas",
       "youtubeLink": "https://www.youtube.com/live/VvKCusKqhx4?si=s9_0LeOjrQc2mdDX",
       "youtubeId": "VvKCusKqhx4",
-      "foto": "assets/images/image27.jpeg",
+      "foto": "image27.jpeg",
       "tanggal": "2 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -576,7 +576,7 @@ window.BAPOLES_DATA = {
       "materi": "KENALI, CEGAH DAN LAWAN KANKER PAYUDARA",
       "youtubeLink": "https://www.youtube.com/live/FNrWaT_0PLw?si=EoyKYC07dECBk5Cw",
       "youtubeId": "FNrWaT_0PLw",
-      "foto": "assets/images/image28.jpeg",
+      "foto": "image28.jpeg",
       "tanggal": "16 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -591,7 +591,7 @@ window.BAPOLES_DATA = {
       "materi": "Manajemen Stres dan Pengenalan Alat HRV",
       "youtubeLink": "https://www.youtube.com/live/GOu-wBBaIcw?si=yXHmHpq7S2WLyOLx",
       "youtubeId": "GOu-wBBaIcw",
-      "foto": "assets/images/image2.png",
+      "foto": "image2.png",
       "tanggal": "12 Maret 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -604,7 +604,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara\r\nApa itu kanker payudara dan mengapa bisa terjadi?",
       "youtubeLink": "https://www.youtube.com/live/zICnXyGhbx4?si=abpVTAHSWGS5KcuL",
       "youtubeId": "zICnXyGhbx4",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "9 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -617,7 +617,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker\r\nPencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
       "youtubeLink": "https://www.youtube.com/live/tbMIYu6RyHE?si=Mrg9YD7FNPa-Ujoq",
       "youtubeId": "tbMIYu6RyHE",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "10 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -630,7 +630,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat\r\nTantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
       "youtubeLink": "https://www.youtube.com/live/hpWJpp4sD5Y?si=YnKVx6-1rMbJ_9Gs",
       "youtubeId": "hpWJpp4sD5Y",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "13 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -643,7 +643,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker\r\nGizi Cerdas dan herbal bijak\"",
       "youtubeLink": "https://www.youtube.com/live/JAddHTM2Xi8?si=PO3hKHPz28_JIMVV",
       "youtubeId": "JAddHTM2Xi8",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "14 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -656,7 +656,7 @@ window.BAPOLES_DATA = {
       "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan\r\nDukungan keluarga dan kualitas hidup pasien\"",
       "youtubeLink": "https://www.youtube.com/live/lOpLBPT2lqY?si=PTHpd9VCHFmz-1Il",
       "youtubeId": "lOpLBPT2lqY",
-      "foto": "assets/images/image3.jpeg",
+      "foto": "image3.jpeg",
       "tanggal": "15 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -669,7 +669,7 @@ window.BAPOLES_DATA = {
       "materi": "SKP aman, Praktik nyaman, Kupas tuntas pemenuhan SKP bagi Named Nakes",
       "youtubeLink": "https://www.youtube.com/live/83Of8HQZj58?si=QFSmIuXxkku1YQH-",
       "youtubeId": "83Of8HQZj58",
-      "foto": "assets/images/image4.jpeg",
+      "foto": "image4.jpeg",
       "tanggal": "16 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -682,7 +682,7 @@ window.BAPOLES_DATA = {
       "materi": "Di balik hasil akurat: cerita dari Laboratorium",
       "youtubeLink": "https://www.youtube.com/live/HOHhMrWAsWA?si=i0LE0WZ5_J_rrm48",
       "youtubeId": "HOHhMrWAsWA",
-      "foto": "assets/images/image5.jpeg",
+      "foto": "image5.jpeg",
       "tanggal": "20 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -695,7 +695,7 @@ window.BAPOLES_DATA = {
       "materi": "Mutu Pelayanan di Fasilitas Pelayanan Kesehatan",
       "youtubeLink": "https://www.youtube.com/live/ZImmMAEdPM8?si=Ez9pAXEI1x4A2s6O",
       "youtubeId": "ZImmMAEdPM8",
-      "foto": "assets/images/image6.jpeg",
+      "foto": "image6.jpeg",
       "tanggal": "23 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -708,7 +708,7 @@ window.BAPOLES_DATA = {
       "materi": "Posyandu tangguh, Generasi kuat tanpa stunting",
       "youtubeLink": "https://www.youtube.com/live/wP6z0aWWaKk?si=afsUiYjLcE-3Khfw",
       "youtubeId": "wP6z0aWWaKk",
-      "foto": "assets/images/image7.jpeg",
+      "foto": "image7.jpeg",
       "tanggal": "4 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -721,7 +721,7 @@ window.BAPOLES_DATA = {
       "materi": "Child Grooming",
       "youtubeLink": "https://www.youtube.com/live/LKIRlcQHSUY?si=BuBrIfMbA1eXUkwR",
       "youtubeId": "LKIRlcQHSUY",
-      "foto": "assets/images/image8.jpeg",
+      "foto": "image8.jpeg",
       "tanggal": "21 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -734,7 +734,7 @@ window.BAPOLES_DATA = {
       "materi": "Apoteker Mengawal Obat Aman dan Bermutu Hingga Ke Tangan Anda",
       "youtubeLink": "https://www.youtube.com/live/e5dFZ4ZaMPs?si=MQF_htu62cMMARrQ",
       "youtubeId": "e5dFZ4ZaMPs",
-      "foto": "assets/images/image9.jpeg",
+      "foto": "image9.jpeg",
       "tanggal": "10 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -747,7 +747,7 @@ window.BAPOLES_DATA = {
       "materi": "Terapi Pencegahan Tuberkulosis (TPT) untuk NTT Sehat",
       "youtubeLink": "https://youtu.be/A1rh-7IVNbc?si=BnE1yNSg3IX73LYQ",
       "youtubeId": "A1rh-7IVNbc",
-      "foto": "assets/images/image10.jpeg",
+      "foto": "image10.jpeg",
       "tanggal": "11 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -760,7 +760,7 @@ window.BAPOLES_DATA = {
       "materi": "Peluang Penugasan Khusus ditengah Polemik Regulasi",
       "youtubeLink": "https://www.youtube.com/live/3439wKIWQZ8?si=Rb5vV74_ZHEGdnWw",
       "youtubeId": "3439wKIWQZ8",
-      "foto": "assets/images/image11.jpeg",
+      "foto": "image11.jpeg",
       "tanggal": "15 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -773,7 +773,7 @@ window.BAPOLES_DATA = {
       "materi": "Bicara Sehat Calon Bunda, Topik: Kupas Tuntas Tentang Kehamilan",
       "youtubeLink": "https://www.youtube.com/live/UuPzamTbGao?si=laTp-cXWvZ4mtx9-",
       "youtubeId": "UuPzamTbGao",
-      "foto": "assets/images/image12.jpeg",
+      "foto": "image12.jpeg",
       "tanggal": "17 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -786,7 +786,7 @@ window.BAPOLES_DATA = {
       "materi": "Tugas Perkembangan Anak dan Remaja dalam Hubungan dengan Kesehatan Mental",
       "youtubeLink": "https://www.youtube.com/live/OSJsTWf7TUg?si=7BtiiexDfNtX7HKz",
       "youtubeId": "OSJsTWf7TUg",
-      "foto": "assets/images/image13.jpeg",
+      "foto": "image13.jpeg",
       "tanggal": "18 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -799,7 +799,7 @@ window.BAPOLES_DATA = {
       "materi": "Apa Itu Tuberkulosis (TB) Untuk Masyarakat NTT Yang Sehat",
       "youtubeLink": "https://youtu.be/AHxzMiWTwdE?si=GrlNl2yTBAKTT4dg",
       "youtubeId": "AHxzMiWTwdE",
-      "foto": "assets/images/image14.jpeg",
+      "foto": "image14.jpeg",
       "tanggal": "25 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -812,7 +812,7 @@ window.BAPOLES_DATA = {
       "materi": "Alur Perencanaan dan Penganggaran Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://youtu.be/PPNcwUEWuG4?si=v5A5xE0u7VhTBSEP",
       "youtubeId": "PPNcwUEWuG4",
-      "foto": "assets/images/image15.jpeg",
+      "foto": "image15.jpeg",
       "tanggal": "7 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -825,7 +825,7 @@ window.BAPOLES_DATA = {
       "materi": "CKG dalam Integrasi Layanan Primer",
       "youtubeLink": "https://www.youtube.com/live/QBPhvNmrR6M?si=0dfm53BSaRzEsXrF",
       "youtubeId": "QBPhvNmrR6M",
-      "foto": "assets/images/image16.jpeg",
+      "foto": "image16.jpeg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -838,7 +838,7 @@ window.BAPOLES_DATA = {
       "materi": "Latar Belakang Mengakhiri Hidup Tanpa Stigma",
       "youtubeLink": "https://www.youtube.com/live/C41-0U0kg8w?si=39KDzBunskAMgMEd",
       "youtubeId": "C41-0U0kg8w",
-      "foto": "assets/images/image17.jpeg",
+      "foto": "image17.jpeg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -851,7 +851,7 @@ window.BAPOLES_DATA = {
       "materi": "Bincang-bincang Terkait Praktik Baik Dalam Penanggulangan TBC Tingkat Provinsi",
       "youtubeLink": "https://youtu.be/ccoEP5ez1sY?si=z2Nyf2cec6g5Subr",
       "youtubeId": "ccoEP5ez1sY",
-      "foto": "assets/images/image18.png",
+      "foto": "image18.png",
       "tanggal": "16 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -864,7 +864,7 @@ window.BAPOLES_DATA = {
       "materi": "Sepekan Mengejar Imunisasi untuk Melengkapi Status Imunisasi Anak",
       "youtubeLink": "https://www.youtube.com/live/j1skuMri3io?si=43xzj83TnnEscoNA",
       "youtubeId": "j1skuMri3io",
-      "foto": "assets/images/image19.jpeg",
+      "foto": "image19.jpeg",
       "tanggal": "24 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -877,7 +877,7 @@ window.BAPOLES_DATA = {
       "materi": "Kenali Kusta: Fakta Bukan Mitos",
       "youtubeLink": "https://youtu.be/ULKY-BflyJ4?si=8AO1qc82hYZb5SNy",
       "youtubeId": "ULKY-BflyJ4",
-      "foto": "assets/images/image20.jpeg",
+      "foto": "image20.jpeg",
       "tanggal": "27 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -890,7 +890,7 @@ window.BAPOLES_DATA = {
       "materi": "Hepatitis: Kenali, Cegah, dan Deteksi Dini demi Masyarakat NTT yang Lebih Sehat, Perluas Akses, Perkuat Kolaborasi, Wujudkan Eliminasi Hepatitis",
       "youtubeLink": "https://www.youtube.com/live/RWpWefkwRW8?si=rmi5FaiNjIetGkPu",
       "youtubeId": "RWpWefkwRW8",
-      "foto": "assets/images/image21.jpeg",
+      "foto": "image21.jpeg",
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -903,7 +903,7 @@ window.BAPOLES_DATA = {
       "materi": "Kolaborasi GASING (Gereja Bersih Stunting) x LENTERA EMAS (Langkah Nyata Terpadu AtasiStunting Menuju Generasi Emas)",
       "youtubeLink": "https://www.youtube.com/live/PSojhMOUMx8?si=B6g2yi4ItxP5S8A1",
       "youtubeId": "PSojhMOUMx8",
-      "foto": "assets/images/image22.jpeg",
+      "foto": "image22.jpeg",
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -916,7 +916,7 @@ window.BAPOLES_DATA = {
       "materi": "Bantuan Hidup Dasar (BHD) Langkah Cepat Menyelamatkan Nyawa",
       "youtubeLink": "https://www.youtube.com/live/zZumYi52Ob4?si=dayjT4FAyMwvyPpn",
       "youtubeId": "zZumYi52Ob4",
-      "foto": "assets/images/image23.jpeg",
+      "foto": "image23.jpeg",
       "tanggal": "30 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -929,7 +929,7 @@ window.BAPOLES_DATA = {
       "materi": "Meng-upgrade Kompetensi Tenaga Kesehatan Bersama UPTD Pelatihan Tenaga Kesehatan Dinas Kesehatan Provinsi NTT",
       "youtubeLink": "https://www.youtube.com/live/LZMKoJwDlH4?si=any0p9QBVNLHIdoh",
       "youtubeId": "LZMKoJwDlH4",
-      "foto": "assets/images/image24.jpeg",
+      "foto": "image24.jpeg",
       "tanggal": "31 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -942,7 +942,7 @@ window.BAPOLES_DATA = {
       "materi": "Harmoni Pelayanan Sinergi Hak dan Kewajiban Tenaga Kesehatan, Tenaga Medis dan Fasilitas Pelayanan Kesehatan",
       "youtubeLink": "https://www.youtube.com/live/DKMQbx25TMY?si=HDGt4Yp4Az1OCjNp",
       "youtubeId": "DKMQbx25TMY",
-      "foto": "assets/images/image25.jpeg",
+      "foto": "image25.jpeg",
       "tanggal": "7 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -955,7 +955,7 @@ window.BAPOLES_DATA = {
       "materi": "Mengawal Generasi Emas NTT, Suara Muda dalam Porta Sapiens dan Riset Air Bersih",
       "youtubeLink": "https://www.youtube.com/live/zSkcu3-jXhM?si=FbbyXszV_H0JgWyj",
       "youtubeId": "zSkcu3-jXhM",
-      "foto": "assets/images/image26.jpeg",
+      "foto": "image26.jpeg",
       "tanggal": "11 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -968,7 +968,7 @@ window.BAPOLES_DATA = {
       "materi": "Pencegahan Stunting dengan Lentera Emas",
       "youtubeLink": "https://www.youtube.com/live/VvKCusKqhx4?si=s9_0LeOjrQc2mdDX",
       "youtubeId": "VvKCusKqhx4",
-      "foto": "assets/images/image27.jpeg",
+      "foto": "image27.jpeg",
       "tanggal": "2 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
@@ -981,7 +981,7 @@ window.BAPOLES_DATA = {
       "materi": "KENALI, CEGAH DAN LAWAN KANKER PAYUDARA",
       "youtubeLink": "https://www.youtube.com/live/FNrWaT_0PLw?si=EoyKYC07dECBk5Cw",
       "youtubeId": "FNrWaT_0PLw",
-      "foto": "assets/images/image28.jpeg",
+      "foto": "image28.jpeg",
       "tanggal": "16 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [

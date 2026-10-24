@@ -145,15 +145,15 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           </div>
 
           <div>
-            <button class="btn-zoom-survey" onclick="openImageModal('assets/images/image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
+            <button class="btn-zoom-survey" onclick="openImageModal('image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6m0 0v6m0-6L14 10M9 21H3m0 0v-6m0 6l7-7"/></svg>
               Buka Infografis Lengkap
             </button>
           </div>
         </div>
 
-        <div class="survey-banner-visual" onclick="openImageModal('assets/images/image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
-          <img src="assets/images/image1.png" alt="Infografis Survei Kepuasan Podcast BAPOLES" class="survey-img-preview" onerror="this.src='LOGO utama.jpeg'">
+        <div class="survey-banner-visual" onclick="openImageModal('image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
+          <img src="image1.png" alt="Infografis Survei Kepuasan Podcast BAPOLES" class="survey-img-preview" onerror="handleImageFallback(this)">
           <div class="survey-img-overlay">
             <span class="zoom-pill">🔍 Klik untuk Perbesar Infografis</span>
           </div>
@@ -590,7 +590,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         pimpinanContainer.innerHTML = timData.pimpinan.map(p => `
           <div class="leader-card">
             <div class="leader-img-box" onclick="openImageModal('${escapeHtml(p.foto)}', '${escapeHtml(p.nama)} - ${escapeHtml(p.jabatan)}')">
-              <img src="${escapeHtml(p.foto)}" alt="${escapeHtml(p.nama)}" class="leader-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+              <img src="${escapeHtml(p.foto)}" alt="${escapeHtml(p.nama)}" class="leader-img" loading="lazy" onerror="handleImageFallback(this)">
             </div>
             <div class="leader-info">
               <span class="leader-role-badge">${escapeHtml(p.role || 'Pengarah')}</span>
@@ -608,7 +608,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         ketuaContainer.innerHTML = `
           <div class="ketua-card">
             <div class="ketua-img-box" onclick="openImageModal('${escapeHtml(k.foto)}', '${escapeHtml(k.nama)} - ${escapeHtml(k.jabatan)}')">
-              <img src="${escapeHtml(k.foto)}" alt="${escapeHtml(k.nama)}" class="ketua-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+              <img src="${escapeHtml(k.foto)}" alt="${escapeHtml(k.nama)}" class="ketua-img" loading="lazy" onerror="handleImageFallback(this)">
             </div>
             <div>
               <span class="leader-role-badge" style="background:#dbeafe; color:#1d4ed8;">Ketua Tim Kerja</span>
@@ -625,7 +625,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         anggotaContainer.innerHTML = timData.timkerPromkes.anggota.map(a => `
           <div class="anggota-card">
             <div class="anggota-img-box" onclick="openImageModal('${escapeHtml(a.foto)}', '${escapeHtml(a.nama)}')">
-              <img src="${escapeHtml(a.foto)}" alt="${escapeHtml(a.nama)}" class="anggota-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+              <img src="${escapeHtml(a.foto)}" alt="${escapeHtml(a.nama)}" class="anggota-img" loading="lazy" onerror="handleImageFallback(this)">
             </div>
             <h5 class="anggota-name">${escapeHtml(a.nama)}</h5>
             <span class="anggota-role">Anggota Timker</span>
@@ -645,7 +645,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           <div class="multimedia-card">
             <p style="font-size:0.95rem; color:var(--text-sub); margin-bottom:18px;">${escapeHtml(mm.deskripsi)}</p>
             <div class="multimedia-banner-box" onclick="openImageModal('${escapeHtml(mm.foto)}', 'Tim Multimedia Kanal BAPOLES - Dinas Kesehatan Provinsi NTT')">
-              <img src="${escapeHtml(mm.foto)}" alt="Tim Multimedia BAPOLES" class="multimedia-banner-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+              <img src="${escapeHtml(mm.foto)}" alt="Tim Multimedia BAPOLES" class="multimedia-banner-img" loading="lazy" onerror="handleImageFallback(this)">
               <div class="survey-img-overlay">
                 <span class="zoom-pill">🔍 Klik untuk Memperbesar Foto Tim</span>
               </div>
@@ -689,11 +689,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         ` : '';
 
         const thumbImg = item.foto || (item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : '');
-        const fallbackYt = item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : 'LOGO utama.jpeg';
 
         const thumbHtml = thumbImg ? `
           <div class="video-thumb-box" onclick="openLiveVideo('${escapeHtml(item.youtubeLink)}', '${escapeHtml(item.materi)}')">
-            <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback='1'; this.src='${fallbackYt}';}else{this.onerror=null; this.src='LOGO utama.jpeg';}">
+            <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" data-yt="${escapeHtml(item.youtubeId || '')}" onerror="handleImageFallback(this)">
             <div class="play-icon-overlay">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -785,8 +784,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       const modal = document.getElementById('image-modal');
       const img = document.getElementById('image-modal-img');
       const titleEl = document.getElementById('image-modal-title');
-      if (!modal || !img) return;
-
+      delete img.dataset.step;
+      img.onerror = function() { handleImageFallback(this); };
       img.src = imgSrc;
       if (titleEl) titleEl.innerText = title || 'Pratinjau Foto';
       modal.classList.add('active');
@@ -797,6 +796,33 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       const img = document.getElementById('image-modal-img');
       if (modal) modal.classList.remove('active');
       if (img) img.src = '';
+    }
+
+    // Universal Robust Fallback for Images (handles root vs assets/images/ seamlessly)
+    function handleImageFallback(img) {
+      if (!img.dataset.step) {
+        img.dataset.step = '1';
+        const src = img.getAttribute('src') || '';
+        if (src.includes('assets/images/')) {
+          img.src = src.replace('assets/images/', '');
+        } else if (!src.startsWith('http') && !src.startsWith('/')) {
+          img.src = 'assets/images/' + src;
+        } else if (img.dataset.yt) {
+          img.src = 'https://img.youtube.com/vi/' + img.dataset.yt + '/hqdefault.jpg';
+        } else {
+          img.src = 'LOGO utama.jpeg';
+        }
+      } else if (img.dataset.step === '1') {
+        img.dataset.step = '2';
+        if (img.dataset.yt) {
+          img.src = 'https://img.youtube.com/vi/' + img.dataset.yt + '/hqdefault.jpg';
+        } else {
+          img.src = 'LOGO utama.jpeg';
+        }
+      } else {
+        img.onerror = null;
+        img.src = 'LOGO utama.jpeg';
+      }
     }
 
     // Escape Key to Close Modals
