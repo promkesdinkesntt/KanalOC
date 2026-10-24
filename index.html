@@ -81,12 +81,16 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           <div class="stat-label">Episode Broadcast</div>
         </div>
         <div class="stat-box">
+          <div class="stat-number" style="color: #0284c7;">91.6%</div>
+          <div class="stat-label">Kepuasan Pemirsa ⭐</div>
+        </div>
+        <div class="stat-box">
           <div class="stat-number" id="stat-speakers-num">65+</div>
           <div class="stat-label">Narasumber & Host</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Akses Gratis Publik</div>
+          <div class="stat-label">Akses Edukasi Gratis</div>
         </div>
       </div>
     </div>
@@ -97,15 +101,70 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
     <!-- TAB 1: SHEET "Beranda" -->
     <section id="view-beranda" class="sheet-view">
-      <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
-        <div>
-          <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">Selamat Datang di Kanal OC</h2>
-          <p style="color: var(--text-sub);">Media komunikasi edukatif BAPOLES (Ba'omong Pola Hidup Sehat) Dinas Kesehatan Provinsi NTT.</p>
+      
+      <!-- Survei Kepuasan BAPOLES Showcase Card (Data Sheet Beranda) -->
+      <div class="survey-banner-card">
+        <div class="survey-banner-content">
+          <div class="survey-badge-header">
+            <span class="pulse-dot"></span>
+            <span>HASIL SURVEI RESMI PEMIRSA</span>
+          </div>
+          <h2 class="survey-title">SURVEI KEPUASAN BAPOLES</h2>
+          <p class="survey-subtitle">
+            <strong>KANAL OC</strong> — <em>"Satu Klik, Ribuan Cerita"</em><br>
+            Dinas Kesehatan Provinsi Nusa Tenggara Timur
+          </p>
+
+          <div class="survey-stats-row">
+            <div class="survey-stat-card">
+              <div class="stat-icon">⭐</div>
+              <div>
+                <div class="stat-val">4.43 / 5</div>
+                <div class="stat-lbl">Skor Rata-Rata Kepuasan</div>
+              </div>
+            </div>
+            <div class="survey-stat-card">
+              <div class="stat-icon">📈</div>
+              <div>
+                <div class="stat-val">91.6%</div>
+                <div class="stat-lbl">Kepuasan Positif Responden</div>
+              </div>
+            </div>
+            <div class="survey-stat-card">
+              <div class="stat-icon">👥</div>
+              <div>
+                <div class="stat-val">275</div>
+                <div class="stat-lbl">Total Responden Terdata</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="survey-finding-box">
+            <strong>💡 Temuan Utama:</strong> 91.6% responden memberikan penilaian 4–5 (Sangat Puas & Puas) dengan rata-rata skor kepuasan 4.43 dari 5 skala penilaian.
+            <div class="survey-source-note">Sumber: Formulir Survei Kepuasan Podcast BAPOLES • n = 275 responden</div>
+          </div>
+
+          <div>
+            <button class="btn-zoom-survey" onclick="openImageModal('assets/images/image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6m0 0v6m0-6L14 10M9 21H3m0 0v-6m0 6l7-7"/></svg>
+              Buka Infografis Lengkap
+            </button>
+          </div>
         </div>
-        <!-- Survei Kepuasan BAPOLES Badge -->
-        <a href="#view-beranda" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: #e0f2fe; border: 1.5px solid #bae6fd; padding: 8px 16px; border-radius: var(--radius-pill); color: #0284c7; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); transition: var(--transition);">
-          <span>📋</span> Survei Kepuasan BAPOLES
-        </a>
+
+        <div class="survey-banner-visual" onclick="openImageModal('assets/images/image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
+          <img src="assets/images/image1.png" alt="Infografis Survei Kepuasan Podcast BAPOLES" class="survey-img-preview" onerror="this.src='LOGO utama.jpeg'">
+          <div class="survey-img-overlay">
+            <span class="zoom-pill">🔍 Klik untuk Perbesar Infografis</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <div>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">🎬 Galeri Siaran Podcast BAPOLES</h3>
+          <p style="color: var(--text-sub); font-size: 0.92rem;">Pilih kategori siaran edukasi kesehatan atau saksikan tayangan langsung YouTube di bawah ini.</p>
+        </div>
       </div>
 
       <!-- Category Filter Bar -->
@@ -228,22 +287,70 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
     <!-- TAB 5: SHEET "Tim Kami" -->
     <section id="view-tim-kami" class="sheet-view" style="display: none;">
-      <div style="margin-bottom: 28px;">
-        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px;">👥 Tim Kami & Narasumber Spesialis</h2>
-        <p style="color: var(--text-sub);">Unit pengelola Kanal BAPOLES serta daftar dokter spesialis, perawat jiwa, psikolog, dan host.</p>
+      <div style="margin-bottom: 32px;">
+        <h2 style="font-size: 1.7rem; font-weight: 800; margin-bottom: 6px;">👥 Tim Pengelola & Pengarah Kanal BAPOLES</h2>
+        <p style="color: var(--text-sub);">Struktur kepengurusan resmi dari data Excel Sheet <em>Tim Kami</em> — Dinas Kesehatan Provinsi NTT.</p>
       </div>
 
-      <!-- Core Units from Excel -->
-      <div style="margin-bottom: 36px;">
-        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">🏢 Unit Pengelola Kanal BAPOLES</h3>
-        <div id="tim-units-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+      <!-- 1. Tim BAPOLES (Pimpinan) -->
+      <div class="team-unit-block">
+        <div class="team-unit-header">
+          <div class="team-unit-icon">🏛️</div>
+          <div>
+            <h3 class="team-unit-title">Tim BAPOLES (Pimpinan & Pengarah)</h3>
+            <p class="team-unit-desc">Pimpinan Dinas Kesehatan Provinsi NTT pembina dan pengarah program edukasi BAPOLES.</p>
+          </div>
+        </div>
+        <div id="tim-pimpinan-container" class="leaders-grid">
           <!-- Rendered via JS -->
         </div>
       </div>
 
-      <!-- Speakers Directory -->
-      <div>
-        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">👨‍⚕️ Narasumber Spesialis & Host</h3>
+      <!-- 2. Timker Promkes -->
+      <div class="team-unit-block">
+        <div class="team-unit-header">
+          <div class="team-unit-icon">📢</div>
+          <div>
+            <h3 class="team-unit-title">Timker Promosi Kesehatan dan Pemberdayaan Masyarakat</h3>
+            <p class="team-unit-desc">Tim kerja inti penyelenggara, perencana program, dan fasilitator komunikasi publik.</p>
+          </div>
+        </div>
+        
+        <!-- Ketua Timker -->
+        <div id="timker-ketua-container">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Anggota Timker -->
+        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">Anggota Tim Kerja:</h4>
+        <div id="timker-anggota-container" class="anggota-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- 3. Tim Multimedia -->
+      <div class="team-unit-block">
+        <div class="team-unit-header">
+          <div class="team-unit-icon">🎬</div>
+          <div>
+            <h3 class="team-unit-title">Tim Multimedia</h3>
+            <p class="team-unit-desc">Tim produksi audio visual, live streaming YouTube, tata teknis, dan artistik siaran.</p>
+          </div>
+        </div>
+        <div id="tim-multimedia-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- 4. Speakers Directory -->
+      <div class="team-unit-block">
+        <div class="team-unit-header">
+          <div class="team-unit-icon">👨‍⚕️</div>
+          <div>
+            <h3 class="team-unit-title">Narasumber Spesialis & Host Podcast</h3>
+            <p class="team-unit-desc">Dokter spesialis, psikolog klinis, perawat jiwa, dan host yang telah berbagi ilmu di 31 episode BAPOLES.</p>
+          </div>
+        </div>
         <div class="episodes-grid" id="tim-kami-grid-container">
           <!-- Rendered via JS -->
         </div>
@@ -343,6 +450,19 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       </div>
       <div class="iframe-wrapper">
         <iframe id="youtube-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="image-modal-backdrop" id="image-modal" onclick="if(event.target === this) closeImageModal()">
+    <div class="image-modal-window">
+      <div class="image-modal-header">
+        <h3 id="image-modal-title" class="image-modal-title">Pratinjau Foto</h3>
+        <button class="image-modal-close-btn" onclick="closeImageModal()" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="image-modal-body">
+        <img id="image-modal-img" src="" alt="Pratinjau Foto" class="image-modal-full">
       </div>
     </div>
   </div>
@@ -459,28 +579,88 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       `).join('');
     }
 
-    // Render Tim Kami Core Units
+    // Render Tim Kami Structure from Excel Data
     function renderTimUnits() {
-      const container = document.getElementById('tim-units-container');
-      if (!container) return;
-      const units = window.BAPOLES_DATA ? window.BAPOLES_DATA.timKami : [];
-      if (!units || units.length === 0) return;
+      const timData = window.BAPOLES_DATA ? window.BAPOLES_DATA.timKami : null;
+      if (!timData) return;
 
-      const unitIcons = ['🌟', '📢', '🎬'];
-      const unitBg = ['#e0f2fe', '#dcfce7', '#f3e8ff'];
-      const unitColor = ['#0284c7', '#16a34a', '#9333ea'];
+      // 1. Pimpinan / Pengarah
+      const pimpinanContainer = document.getElementById('tim-pimpinan-container');
+      if (pimpinanContainer && timData.pimpinan) {
+        pimpinanContainer.innerHTML = timData.pimpinan.map(p => `
+          <div class="leader-card">
+            <div class="leader-img-box" onclick="openImageModal('${escapeHtml(p.foto)}', '${escapeHtml(p.nama)} - ${escapeHtml(p.jabatan)}')">
+              <img src="${escapeHtml(p.foto)}" alt="${escapeHtml(p.nama)}" class="leader-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+            </div>
+            <div class="leader-info">
+              <span class="leader-role-badge">${escapeHtml(p.role || 'Pengarah')}</span>
+              <h4 class="leader-name">${escapeHtml(p.nama)}</h4>
+              <p class="leader-jabatan">${escapeHtml(p.jabatan)}</p>
+            </div>
+          </div>
+        `).join('');
+      }
 
-      container.innerHTML = units.map((u, i) => `
-        <div style="background: #ffffff; border: 1.5px solid var(--border-glass); border-radius: var(--radius-md); padding: 22px 20px; display: flex; align-items: center; gap: 16px; box-shadow: 0 4px 16px rgba(2, 132, 199, 0.06);">
-          <div style="width: 50px; height: 50px; border-radius: 14px; background: ${unitBg[i % 3]}; color: ${unitColor[i % 3]}; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-            ${unitIcons[i % 3]}
+      // 2. Timker Promkes (Ketua)
+      const ketuaContainer = document.getElementById('timker-ketua-container');
+      if (ketuaContainer && timData.timkerPromkes && timData.timkerPromkes.ketua) {
+        const k = timData.timkerPromkes.ketua;
+        ketuaContainer.innerHTML = `
+          <div class="ketua-card">
+            <div class="ketua-img-box" onclick="openImageModal('${escapeHtml(k.foto)}', '${escapeHtml(k.nama)} - ${escapeHtml(k.jabatan)}')">
+              <img src="${escapeHtml(k.foto)}" alt="${escapeHtml(k.nama)}" class="ketua-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+            </div>
+            <div>
+              <span class="leader-role-badge" style="background:#dbeafe; color:#1d4ed8;">Ketua Tim Kerja</span>
+              <h4 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin-bottom:6px;">${escapeHtml(k.nama)}</h4>
+              <p style="font-size:0.95rem; color:var(--text-sub); line-height:1.4;">${escapeHtml(k.jabatan)}</p>
+            </div>
           </div>
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600;">Unit Kerja Pengelola</span>
-            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main); margin-top: 2px;">${escapeHtml(u)}</h4>
+        `;
+      }
+
+      // 3. Timker Promkes (Anggota)
+      const anggotaContainer = document.getElementById('timker-anggota-container');
+      if (anggotaContainer && timData.timkerPromkes && timData.timkerPromkes.anggota) {
+        anggotaContainer.innerHTML = timData.timkerPromkes.anggota.map(a => `
+          <div class="anggota-card">
+            <div class="anggota-img-box" onclick="openImageModal('${escapeHtml(a.foto)}', '${escapeHtml(a.nama)}')">
+              <img src="${escapeHtml(a.foto)}" alt="${escapeHtml(a.nama)}" class="anggota-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+            </div>
+            <h5 class="anggota-name">${escapeHtml(a.nama)}</h5>
+            <span class="anggota-role">Anggota Timker</span>
           </div>
-        </div>
-      `).join('');
+        `).join('');
+      }
+
+      // 4. Tim Multimedia
+      const multimediaContainer = document.getElementById('tim-multimedia-container');
+      if (multimediaContainer && timData.timMultimedia) {
+        const mm = timData.timMultimedia;
+        const membersHtml = (mm.anggota || []).map(m => `
+          <span class="multimedia-member-pill">👤 ${escapeHtml(m)}</span>
+        `).join('');
+
+        multimediaContainer.innerHTML = `
+          <div class="multimedia-card">
+            <p style="font-size:0.95rem; color:var(--text-sub); margin-bottom:18px;">${escapeHtml(mm.deskripsi)}</p>
+            <div class="multimedia-banner-box" onclick="openImageModal('${escapeHtml(mm.foto)}', 'Tim Multimedia Kanal BAPOLES - Dinas Kesehatan Provinsi NTT')">
+              <img src="${escapeHtml(mm.foto)}" alt="Tim Multimedia BAPOLES" class="multimedia-banner-img" loading="lazy" onerror="this.onerror=null; this.src='LOGO utama.jpeg'">
+              <div class="survey-img-overlay">
+                <span class="zoom-pill">🔍 Klik untuk Memperbesar Foto Tim</span>
+              </div>
+            </div>
+            <div>
+              <div class="multimedia-names-header">
+                <span>👥 Daftar Personel Tim Multimedia (${(mm.anggota || []).length} Orang):</span>
+              </div>
+              <div class="multimedia-members-pills">
+                ${membersHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      }
     }
 
     // Render Podcast Cards
@@ -509,10 +689,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         ` : '';
 
         const thumbImg = item.foto || (item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : '');
+        const fallbackYt = item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : 'LOGO utama.jpeg';
 
         const thumbHtml = thumbImg ? `
           <div class="video-thumb-box" onclick="openLiveVideo('${escapeHtml(item.youtubeLink)}', '${escapeHtml(item.materi)}')">
-            <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" onerror="this.src='LOGO utama.jpeg'">
+            <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback='1'; this.src='${fallbackYt}';}else{this.onerror=null; this.src='LOGO utama.jpeg';}">
             <div class="play-icon-overlay">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -598,6 +779,33 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       document.getElementById('video-modal').classList.remove('active');
       document.getElementById('youtube-iframe').src = '';
     }
+
+    // Image Modal Lightbox
+    function openImageModal(imgSrc, title) {
+      const modal = document.getElementById('image-modal');
+      const img = document.getElementById('image-modal-img');
+      const titleEl = document.getElementById('image-modal-title');
+      if (!modal || !img) return;
+
+      img.src = imgSrc;
+      if (titleEl) titleEl.innerText = title || 'Pratinjau Foto';
+      modal.classList.add('active');
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('image-modal');
+      const img = document.getElementById('image-modal-img');
+      if (modal) modal.classList.remove('active');
+      if (img) img.src = '';
+    }
+
+    // Escape Key to Close Modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeImageModal();
+        closeVideoModal();
+      }
+    });
 
     function getInitials(name) {
       if (!name) return 'B';
