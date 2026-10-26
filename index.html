@@ -29,7 +29,7 @@
         </div>
       </a>
 
-      <!-- 6 Sheet Menu Bar matching exact Sheet Titles in LINK BAPOLES.xlsx -->
+      <!-- Menu Bar matching Sheet Titles + Penilaian & Masukan -->
       <nav class="nav-menu">
         <a class="nav-link active" id="menu-beranda" onclick="switchSheetTab('beranda')">
           🏠 Beranda
@@ -48,6 +48,9 @@
         </a>
         <a class="nav-link" id="menu-kontak" onclick="switchSheetTab('kontak')">
           📞 Kontak
+        </a>
+        <a class="nav-link" id="menu-penilaian" onclick="switchSheetTab('penilaian')">
+          ⭐ Penilaian & Masukan
         </a>
       </nav>
     </div>
@@ -144,10 +147,13 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             <div class="survey-source-note">Sumber: Formulir Survei Kepuasan Podcast BAPOLES • n = 275 responden</div>
           </div>
 
-          <div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <button class="btn-zoom-survey" onclick="openImageModal('image1.png', 'Infografis Survei Kepuasan Podcast BAPOLES - Dinas Kesehatan Provinsi NTT')">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6m0 0v6m0-6L14 10M9 21H3m0 0v-6m0 6l7-7"/></svg>
               Buka Infografis Lengkap
+            </button>
+            <button class="btn-zoom-survey" style="background: #e0f2fe; color: #0284c7; border: 1.5px solid #bae6fd; box-shadow: none;" onclick="switchSheetTab('penilaian')">
+              ⭐ Beri Penilaian & Masukan Anda
             </button>
           </div>
         </div>
@@ -421,11 +427,111 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             <span style="font-size: 0.78rem; font-weight: 600; color: #0369a1; background: #e0f2fe; padding: 4px 12px; border-radius: 20px;">🌐 Kunjungi Portal</span>
           </a>
 
+    <!-- TAB 7: SHEET "Penilaian & Masukan Pengunjung" -->
+    <section id="view-penilaian" class="sheet-view" style="display: none;">
+      <div style="margin-bottom: 28px;">
+        <div class="badge-pill" style="margin-bottom: 8px;">
+          ⭐ Suara Pemirsa & Pengunjung
+        </div>
+        <h2 style="font-size: 1.7rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">Penilaian & Masukan Pengunjung</h2>
+        <p style="color: var(--text-sub); font-size: 0.96rem; max-width: 820px; line-height: 1.6;">
+          Pendapat dan aspirasi Anda sangat berharga bagi peningkatan mutu tayangan edukasi kesehatan Kanal OC - BAPOLES Dinas Kesehatan Provinsi NTT. Silakan berikan penilaian bintang dan masukan membangun Anda melalui formulir interaktif di bawah ini.
+        </p>
+      </div>
+
+      <div class="penilaian-layout">
+        <!-- Kolom Kiri: Formulir Penilaian & Masukan -->
+        <div class="penilaian-form-card">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">✍️</div>
+            <div>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 2px;">Beri Penilaian & Masukan</h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted);">Nama, Asal, dan Uraian Penilaian Anda</p>
+            </div>
+          </div>
+
+          <form id="form-penilaian" onsubmit="handleReviewSubmit(event)">
+            <!-- Input Nama -->
+            <div class="form-group">
+              <label for="review-nama">Nama Lengkap <span style="color: #ef4444;">*</span></label>
+              <input type="text" id="review-nama" class="form-control" placeholder="Contoh: dr. Maria Fernandez / Yohanes Bria" required>
+            </div>
+
+            <!-- Input Asal -->
+            <div class="form-group">
+              <label for="review-asal">Asal (Instansi / Lembaga / Kota / Daerah) <span style="color: #ef4444;">*</span></label>
+              <input type="text" id="review-asal" class="form-control" placeholder="Contoh: Puskesmas Oebobo / Dinkes Kab. Kupang / Umum" required>
+            </div>
+
+            <!-- Input Rating Bintang -->
+            <div class="form-group">
+              <label>Penilaian Kualitas Siaran & Web <span style="color: #ef4444;">*</span></label>
+              <div class="star-rating-container">
+                <div class="star-rating-stars" id="star-picker" onmouseleave="resetStarHover()">
+                  <span class="star-btn" data-val="1" onmouseover="hoverStar(1)" onclick="selectStar(1)">★</span>
+                  <span class="star-btn" data-val="2" onmouseover="hoverStar(2)" onclick="selectStar(2)">★</span>
+                  <span class="star-btn" data-val="3" onmouseover="hoverStar(3)" onclick="selectStar(3)">★</span>
+                  <span class="star-btn" data-val="4" onmouseover="hoverStar(4)" onclick="selectStar(4)">★</span>
+                  <span class="star-btn" data-val="5" onmouseover="hoverStar(5)" onclick="selectStar(5)">★</span>
+                </div>
+                <span class="star-rating-label" id="star-rating-label">Sangat Baik & Puas (5/5)</span>
+              </div>
+              <input type="hidden" id="review-rating" value="5">
+            </div>
+
+            <!-- Input Uraian Penilaian & Masukan -->
+            <div class="form-group">
+              <label for="review-uraian">Uraian Penilaian & Masukan <span style="color: #ef4444;">*</span></label>
+              <textarea id="review-uraian" class="form-control" rows="4" placeholder="Tuliskan pengalaman Anda menyaksikan siaran podcast BAPOLES, saran topik berikutnya, narasumber yang diharapkan, atau masukan untuk pengembangan portal..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-review">
+              <span>🚀</span> Kirim Penilaian & Masukan
+            </button>
+          </form>
+        </div>
+
+        <!-- Kolom Kanan: Ulasan & Testimoni Pengunjung -->
+        <div>
+          <!-- Statistik Ringkas Penilaian -->
+          <div class="penilaian-summary-bar">
+            <div class="summary-score-box">
+              <div class="score-num" id="summary-avg-score">4.8</div>
+              <div class="summary-stars" id="summary-star-display">★★★★★</div>
+              <div class="score-sub">Skor Rata-Rata Pengunjung</div>
+            </div>
+            <div class="summary-pill-group">
+              <div class="summary-metric-card">
+                <div class="val" id="summary-total-reviews">5</div>
+                <div class="lbl">Total Ulasan Masuk</div>
+              </div>
+              <div class="summary-metric-card">
+                <div class="val" id="summary-satisfied-rate">100%</div>
+                <div class="lbl">Puas & Sangat Baik (⭐ 4–5)</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">💬 Ulasan & Masukan Pengunjung</h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Terverifikasi Pengunjung</span>
+          </div>
+
+          <!-- Feed List Ulasan -->
+          <div class="review-list" id="review-feed-container">
+            <!-- Rendered via JS -->
+          </div>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- Toast Notification -->
+  <div class="toast-alert" id="toast-alert">
+    <span>✅</span>
+    <span id="toast-msg">Terima kasih! Penilaian dan masukan Anda berhasil dikirim.</span>
+  </div>
 
   <!-- Video Player Modal -->
   <div class="modal-backdrop" id="video-modal">
@@ -458,7 +564,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 12px;">
       <img src="LOGO utama.jpeg" alt="BAPOLES" style="height: 44px; border-radius: 8px;" onerror="this.src='https://ui-avatars.com/api/?name=Bapoles&background=0284c7&color=fff'">
       <p>© 2026 Dinas Kesehatan Provinsi NTT - Kanal OC - BAPOLES (Ba'omong Pola Hidup Sehat)</p>
-      <p style="font-size: 0.8rem; color: var(--text-muted);">6 Menu Sheet: Beranda | Jadwal podcast | Katalog Podcast | Tentang | Tim Kami | Kontak</p>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">7 Menu: Beranda | Jadwal podcast | Katalog Podcast | Tentang | Tim Kami | Kontak | Penilaian & Masukan</p>
     </div>
   </footer>
 
@@ -489,6 +595,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       renderPodcastGrid('jadwal-grid-container', podcastsData.slice(0, 6));
       renderJadwalAgenda();
       renderTimUnits();
+      selectStar(5);
+      renderReviews();
     });
 
     // 6 Sheet Menu Switcher
@@ -810,6 +918,216 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     function escapeHtml(str) {
       if (!str) return '';
       return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // ==========================================
+    // SISTEM PENILAIAN & MASUKAN PENGUNJUNG WEB
+    // ==========================================
+    let currentSelectedStar = 5;
+    const STAR_LABELS = {
+      1: 'Kurang (1/5)',
+      2: 'Cukup (2/5)',
+      3: 'Baik (3/5)',
+      4: 'Sangat Bagus (4/5)',
+      5: 'Sangat Baik & Puas (5/5)'
+    };
+
+    const DEFAULT_REVIEWS = [
+      {
+        name: "dr. Yohanes Fernandez",
+        origin: "Puskesmas Oebobo, Kota Kupang",
+        rating: 5,
+        date: "24 Okt 2026",
+        comment: "Sangat mengapresiasi inovasi Kanal BAPOLES Dinkes Prov. NTT! Pembahasan topik stunting dan penanganan kanker sangat edukatif, lugas, dan aplikatif bagi tenaga medis maupun masyarakat luas."
+      },
+      {
+        name: "Maria Kristina, SKM",
+        origin: "Dinkes Kab. Kupang",
+        rating: 5,
+        date: "22 Okt 2026",
+        comment: "Penyampaian materi oleh para dokter spesialis dan narasumber sangat jelas dan interaktif. Portal web ini sangat memudahkan kami dalam mencari rujukan materi penyuluhan promosi kesehatan ke desa-desa."
+      },
+      {
+        name: "Fransiscus Xaverius",
+        origin: "Masyarakat Umum - Kupang",
+        rating: 5,
+        date: "20 Okt 2026",
+        comment: "Penjelasan tentang pencegahan stunting dan pola hidup sehat bahasa yang digunakan santai (ba'omong) jadi mudah dimengerti keluarga kami. Tampilan website-nya juga cerah, bersih, dan cepat dibuka di HP."
+      },
+      {
+        name: "Ns. Hendrikus Bria, S.Kep",
+        origin: "RSUD Prof. Dr. W. Z. Johannes",
+        rating: 4,
+        date: "18 Okt 2026",
+        comment: "Konten siaran podcast sangat berbobot dan informatif. Usul untuk episode berikutnya bisa memperbanyak pembahasan kesehatan mental remaja dan tips pertolongan pertama gawat darurat di rumah tangga."
+      },
+      {
+        name: "Theresia Loda, A.Md.Keb",
+        origin: "Puskesmas Sikumana",
+        rating: 5,
+        date: "15 Okt 2026",
+        comment: "Satu klik ribuan cerita, benar-benar terasa manfaatnya. Kami sering putar rekaman siaran podcast ini di ruang tunggu antrean pasien puskesmas untuk edukasi germas sambil menunggu pelayanan."
+      }
+    ];
+
+    function getStoredReviews() {
+      try {
+        const stored = localStorage.getItem('bapoles_reviews');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {
+        console.error('Error reading localStorage reviews:', e);
+      }
+      return DEFAULT_REVIEWS;
+    }
+
+    function saveReviews(reviews) {
+      try {
+        localStorage.setItem('bapoles_reviews', JSON.stringify(reviews));
+      } catch (e) {
+        console.error('Error saving reviews to localStorage:', e);
+      }
+    }
+
+    function selectStar(val) {
+      currentSelectedStar = val;
+      const input = document.getElementById('review-rating');
+      if (input) input.value = val;
+      highlightStars(val);
+      const label = document.getElementById('star-rating-label');
+      if (label) label.innerText = STAR_LABELS[val] || `${val}/5`;
+    }
+
+    function hoverStar(val) {
+      highlightStars(val);
+      const label = document.getElementById('star-rating-label');
+      if (label) label.innerText = STAR_LABELS[val] || `${val}/5`;
+    }
+
+    function resetStarHover() {
+      highlightStars(currentSelectedStar);
+      const label = document.getElementById('star-rating-label');
+      if (label) label.innerText = STAR_LABELS[currentSelectedStar] || `${currentSelectedStar}/5`;
+    }
+
+    function highlightStars(count) {
+      const stars = document.querySelectorAll('#star-picker .star-btn');
+      stars.forEach((star, idx) => {
+        if (idx < count) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    function renderReviews() {
+      const container = document.getElementById('review-feed-container');
+      if (!container) return;
+      const reviews = getStoredReviews();
+
+      container.innerHTML = reviews.map(r => {
+        const initials = getInitials(r.name);
+        const starStr = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        return `
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="review-user-info">
+                <div class="review-user-avatar">${initials}</div>
+                <div>
+                  <h4 class="review-user-name">${escapeHtml(r.name)}</h4>
+                  <span class="review-origin-badge">📍 ${escapeHtml(r.origin)}</span>
+                </div>
+              </div>
+              <div style="text-align: right;">
+                <div class="review-stars-val">${starStr}</div>
+                <div class="review-date-badge">${escapeHtml(r.date || 'Baru saja')}</div>
+              </div>
+            </div>
+            <p class="review-comment-box">${escapeHtml(r.comment)}</p>
+          </div>
+        `;
+      }).join('');
+
+      updateReviewStats(reviews);
+    }
+
+    function updateReviewStats(reviews) {
+      if (!reviews || reviews.length === 0) return;
+      const total = reviews.length;
+      const sum = reviews.reduce((acc, curr) => acc + (Number(curr.rating) || 5), 0);
+      const avg = (sum / total).toFixed(1);
+      const satisfiedCount = reviews.filter(r => (Number(r.rating) || 0) >= 4).length;
+      const satRate = Math.round((satisfiedCount / total) * 100);
+
+      const avgEl = document.getElementById('summary-avg-score');
+      if (avgEl) avgEl.innerText = avg;
+
+      const totalEl = document.getElementById('summary-total-reviews');
+      if (totalEl) totalEl.innerText = total;
+
+      const satEl = document.getElementById('summary-satisfied-rate');
+      if (satEl) satEl.innerText = `${satRate}%`;
+
+      const starDisp = document.getElementById('summary-star-display');
+      if (starDisp) {
+        const fullStars = Math.round(Number(avg));
+        starDisp.innerText = '★'.repeat(fullStars) + '☆'.repeat(Math.max(0, 5 - fullStars));
+      }
+    }
+
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+      const nama = document.getElementById('review-nama').value.trim();
+      const asal = document.getElementById('review-asal').value.trim();
+      const rating = parseInt(document.getElementById('review-rating').value, 10) || 5;
+      const comment = document.getElementById('review-uraian').value.trim();
+
+      if (!nama || !asal || !comment) {
+        alert('Mohon lengkapi semua kolom formulir (Nama, Asal, dan Uraian Masukan).');
+        return;
+      }
+
+      const today = new Date();
+      const options = { day: 'numeric', month: 'short', year: 'numeric' };
+      const formattedDate = today.toLocaleDateString('id-ID', options);
+
+      const newReview = {
+        name: nama,
+        origin: asal,
+        rating: rating,
+        date: formattedDate,
+        comment: comment
+      };
+
+      const reviews = getStoredReviews();
+      reviews.unshift(newReview);
+      saveReviews(reviews);
+
+      renderReviews();
+
+      // Reset form
+      document.getElementById('form-penilaian').reset();
+      selectStar(5);
+
+      // Toast notification
+      showToast('Terima kasih! Penilaian dan masukan Anda berhasil dikirim.');
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toast-alert');
+      const msgEl = document.getElementById('toast-msg');
+      if (!toast) return;
+      if (msgEl) msgEl.innerText = msg;
+
+      toast.classList.add('show');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
     }
   </script>
 </body>

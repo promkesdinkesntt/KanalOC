@@ -1189,3 +1189,332 @@ footer {
   .episodes-grid { grid-template-columns: 1fr; }
   .nav-menu { width: 100%; overflow-x: auto; }
 }
+
+/* ===================================================
+   PENILAIAN & MASUKAN PENGUNJUNG (REVIEW & FEEDBACK)
+   =================================================== */
+.penilaian-layout {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .penilaian-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.penilaian-form-card {
+  background: #ffffff;
+  border: 1.5px solid #bae6fd;
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+  position: sticky;
+  top: 90px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.form-group label span.req {
+  color: #ef4444;
+}
+
+.form-control {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--text-main);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+}
+
+.star-rating-container {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.star-rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.star-rating-stars .star,
+.star-rating-stars .star-btn,
+.star-btn {
+  color: #cbd5e1;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.star-rating-stars .star.active,
+.star-rating-stars .star-btn.active,
+.star-rating-stars .star.hovered,
+.star-rating-stars .star-btn.hovered,
+.star-btn.active {
+  color: #eab308;
+}
+
+.star-rating-stars .star:hover,
+.star-rating-stars .star-btn:hover,
+.star-btn:hover {
+  transform: scale(1.25);
+}
+
+.star-rating-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0284c7;
+  margin-top: 8px;
+  min-height: 20px;
+}
+
+.btn-submit-review {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+  transition: var(--transition);
+}
+
+.btn-submit-review:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.35);
+}
+
+/* Reviews Feed & Summary */
+.penilaian-summary-bar {
+  background: #ffffff;
+  border: 1.5px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 24px;
+}
+
+.summary-score-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-big-num,
+.score-num {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0284c7;
+  line-height: 1;
+}
+
+.summary-stars {
+  color: #eab308;
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.summary-total-lbl,
+.score-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.summary-pill-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.summary-pill,
+.summary-metric-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.summary-metric-card .val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #15803d;
+  line-height: 1.2;
+}
+
+.summary-metric-card .lbl {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.reviews-list-container,
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.05);
+  transition: var(--transition);
+}
+
+.review-card:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.1);
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.review-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #bae6fd;
+  flex-shrink: 0;
+}
+
+.review-user-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.review-origin-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  margin-top: 4px;
+}
+
+.review-rating-meta {
+  text-align: right;
+}
+
+.review-stars-display,
+.review-stars-val {
+  color: #eab308;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+}
+
+.review-date-display,
+.review-date-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.review-comment-box {
+  background: #f8fafc;
+  border-left: 3px solid #0284c7;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 0.93rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.toast-alert {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast-alert.show {
+  transform: translateY(0);
+  opacity: 1;
+}
