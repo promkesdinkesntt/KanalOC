@@ -427,6 +427,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             <span style="font-size: 0.78rem; font-weight: 600; color: #0369a1; background: #e0f2fe; padding: 4px 12px; border-radius: 20px;">🌐 Kunjungi Portal</span>
           </a>
 
+        </div>
+      </div>
+    </section>
+
     <!-- TAB 7: SHEET "Penilaian & Masukan Pengunjung" -->
     <section id="view-penilaian" class="sheet-view" style="display: none;">
       <div style="margin-bottom: 28px;">
@@ -637,6 +641,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
       const viewEl = document.getElementById(`view-${sheetKey}`) || document.getElementById(`view-katalog-podcast`);
       if (viewEl) viewEl.style.display = 'block';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Category Filter
