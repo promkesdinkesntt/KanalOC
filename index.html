@@ -458,7 +458,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             <!-- Input Nama -->
             <div class="form-group">
               <label for="review-nama">Nama Lengkap <span style="color: #ef4444;">*</span></label>
-              <input type="text" id="review-nama" class="form-control" placeholder="Contoh: dr. Maria Fernandez / Yohanes Bria" required>
+              <input type="text" id="review-nama" class="form-control" placeholder="Tuliskan Nama Anda atau 'Anonim'" required>
             </div>
 
             <!-- Input Asal -->
@@ -946,10 +946,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     });
 
     function getInitials(name) {
-      if (!name) return 'B';
+      if (!name) return '👤';
+      if (name.toLowerCase().includes('anonim')) return '👤';
       const parts = name.replace(/dr\.|Sp\.[A-Z]+|M\.Kes|SKM|S\.Kep|Ns/gi, '').trim().split(' ');
-      if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
-      return parts[0][0] ? parts[0][0].toUpperCase() : 'B';
+      if (parts.length >= 2 && parts[0] && parts[1]) return (parts[0][0] + parts[1][0]).toUpperCase();
+      return parts[0][0] ? parts[0][0].toUpperCase() : '👤';
     }
 
     function escapeHtml(str) {
@@ -970,10 +971,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       5: 'Sangat Baik & Puas (5/5)'
     };
 
+    // Ulasan awal telah dibuat Anonim sesuai permintaan
     const DEFAULT_REVIEWS = [
       {
-        name: "dr. Yohanes Fernandez",
-        origin: "Puskesmas Oebobo, Kota Kupang",
+        name: "Anonim",
+        origin: "Puskesmas di Kota Kupang",
         topic: "Deteksi Dini Kanker Payudara",
         rating: 5,
         likes: 18,
@@ -981,8 +983,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         comment: "Sangat mengapresiasi inovasi Kanal BAPOLES Dinkes Prov. NTT! Pembahasan topik stunting dan penanganan kanker sangat edukatif, lugas, dan aplikatif bagi tenaga medis maupun masyarakat luas."
       },
       {
-        name: "Maria Kristina, SKM",
-        origin: "Dinkes Kab. Kupang",
+        name: "Anonim",
+        origin: "Dinas Kesehatan Daerah",
         topic: "Pencegahan dan Penanggulangan Stunting",
         rating: 5,
         likes: 14,
@@ -990,8 +992,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         comment: "Penyampaian materi oleh para dokter spesialis dan narasumber sangat jelas dan interaktif. Portal web ini sangat memudahkan kami dalam mencari rujukan materi penyuluhan promosi kesehatan ke desa-desa."
       },
       {
-        name: "Fransiscus Xaverius",
-        origin: "Masyarakat Umum - Kupang",
+        name: "Anonim",
+        origin: "Masyarakat Umum - NTT",
         topic: "Umum & Portal Web",
         rating: 5,
         likes: 9,
@@ -999,8 +1001,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         comment: "Penjelasan tentang pencegahan stunting dan pola hidup sehat bahasa yang digunakan santai (ba'omong) jadi mudah dimengerti keluarga kami. Tampilan website-nya juga cerah, bersih, dan cepat dibuka di HP."
       },
       {
-        name: "Ns. Hendrikus Bria, S.Kep",
-        origin: "RSUD Prof. Dr. W. Z. Johannes",
+        name: "Anonim",
+        origin: "RSUD di NTT",
         topic: "Kesehatan Jiwa Remaja",
         rating: 4,
         likes: 11,
@@ -1008,8 +1010,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         comment: "Konten siaran podcast sangat berbobot dan informatif. Usul untuk episode berikutnya bisa memperbanyak pembahasan kesehatan mental remaja dan tips pertolongan pertama gawat darurat di rumah tangga."
       },
       {
-        name: "Theresia Loda, A.Md.Keb",
-        origin: "Puskesmas Sikumana",
+        name: "Anonim",
+        origin: "Puskesmas di NTT",
         topic: "Pemberian Makanan Bayi dan Anak (PMBA)",
         rating: 5,
         likes: 7,
@@ -1018,12 +1020,32 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       }
     ];
 
+    const FORMER_INITIAL_NAMES = [
+      "dr. Yohanes Fernandez",
+      "Maria Kristina, SKM",
+      "Fransiscus Xaverius",
+      "Ns. Hendrikus Bria, S.Kep",
+      "Theresia Loda, A.Md.Keb"
+    ];
+
     function getStoredReviews() {
       try {
         const stored = localStorage.getItem('bapoles_reviews');
         if (stored) {
-          const parsed = JSON.parse(stored);
-          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+          let parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            // Otomatis konversi ulasan contoh lama di memori browser menjadi Anonim
+            let hasLegacy = false;
+            parsed = parsed.map(r => {
+              if (FORMER_INITIAL_NAMES.includes(r.name) || (r.name && (r.name.includes('Fernandez') || r.name.includes('Kristina')))) {
+                hasLegacy = true;
+                return { ...r, name: "Anonim" };
+              }
+              return r;
+            });
+            if (hasLegacy) saveReviews(parsed);
+            return parsed;
+          }
         }
       } catch (e) {
         console.error('Error reading localStorage reviews:', e);
