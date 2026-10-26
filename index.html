@@ -463,6 +463,14 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
               <input type="text" id="review-asal" class="form-control" placeholder="Contoh: Puskesmas Oebobo / Dinkes Kab. Kupang / Umum" required>
             </div>
 
+            <!-- Input Pilihan Topik Siaran / Episode (Opsional) -->
+            <div class="form-group">
+              <label for="review-topik">Topik Siaran / Episode yang Diulas (Opsional)</label>
+              <select id="review-topik" class="form-control">
+                <option value="Umum & Portal Web">🌟 Umum / Keseluruhan Portal Web</option>
+              </select>
+            </div>
+
             <!-- Input Rating Bintang -->
             <div class="form-group">
               <label>Penilaian Kualitas Siaran & Web <span style="color: #ef4444;">*</span></label>
@@ -481,8 +489,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
             <!-- Input Uraian Penilaian & Masukan -->
             <div class="form-group">
-              <label for="review-uraian">Uraian Penilaian & Masukan <span style="color: #ef4444;">*</span></label>
-              <textarea id="review-uraian" class="form-control" rows="4" placeholder="Tuliskan pengalaman Anda menyaksikan siaran podcast BAPOLES, saran topik berikutnya, narasumber yang diharapkan, atau masukan untuk pengembangan portal..." required></textarea>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <label for="review-uraian" style="margin-bottom: 0;">Uraian Penilaian & Masukan <span style="color: #ef4444;">*</span></label>
+                <span id="char-counter" style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">0 / 500</span>
+              </div>
+              <textarea id="review-uraian" class="form-control" rows="4" maxlength="500" oninput="updateCharCount(this)" placeholder="Tuliskan pengalaman Anda menyaksikan siaran podcast BAPOLES, saran topik berikutnya, narasumber yang diharapkan, atau masukan untuk pengembangan portal..." required></textarea>
             </div>
 
             <button type="submit" class="btn-submit-review">
@@ -512,9 +523,17 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             </div>
           </div>
 
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
             <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">💬 Ulasan & Masukan Pengunjung</h3>
             <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Terverifikasi Pengunjung</span>
+          </div>
+
+          <!-- Filter Pill Bintang -->
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+            <button class="review-filter-pill active" id="filter-pill-all" onclick="filterReviews('ALL', this)">✨ Semua (<span id="count-all">5</span>)</button>
+            <button class="review-filter-pill" id="filter-pill-5" onclick="filterReviews(5, this)">⭐⭐⭐⭐⭐ 5 (<span id="count-5">4</span>)</button>
+            <button class="review-filter-pill" id="filter-pill-4" onclick="filterReviews(4, this)">⭐⭐⭐⭐ 4 (<span id="count-4">1</span>)</button>
+            <button class="review-filter-pill" id="filter-pill-3" onclick="filterReviews(3, this)">⭐⭐⭐ ≤3 (<span id="count-3">0</span>)</button>
           </div>
 
           <!-- Feed List Ulasan -->
@@ -526,6 +545,12 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     </section>
 
   </main>
+
+  <!-- Floating Action Button (FAB) - Tulis Ulasan Cepat -->
+  <div class="fab-review-btn" onclick="openReviewForm()" title="Tulis Ulasan & Penilaian">
+    <span class="fab-icon">⭐</span>
+    <span class="fab-text">Tulis Ulasan</span>
+  </div>
 
   <!-- Toast Notification -->
   <div class="toast-alert" id="toast-alert">
@@ -595,6 +620,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       renderPodcastGrid('jadwal-grid-container', podcastsData.slice(0, 6));
       renderJadwalAgenda();
       renderTimUnits();
+      populateReviewTopics();
       selectStar(5);
       renderReviews();
     });
@@ -824,7 +850,12 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
                 <div>📅 ${escapeHtml(item.tanggal)}</div>
                 <div style="color:var(--text-muted);">${escapeHtml(item.waktu)}</div>
               </div>
-              ${playBtn}
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <button class="btn-review-mini" title="Beri ulasan untuk episode ini" onclick="openReviewForEpisode('${escapeHtml(item.materi).replace(/'/g, "\\'")}')">
+                  ⭐ Ulas
+                </button>
+                ${playBtn}
+              </div>
             </div>
           </div>
         `;
@@ -924,6 +955,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     // SISTEM PENILAIAN & MASUKAN PENGUNJUNG WEB
     // ==========================================
     let currentSelectedStar = 5;
+    let activeReviewFilter = 'ALL';
     const STAR_LABELS = {
       1: 'Kurang (1/5)',
       2: 'Cukup (2/5)',
@@ -936,35 +968,45 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       {
         name: "dr. Yohanes Fernandez",
         origin: "Puskesmas Oebobo, Kota Kupang",
+        topic: "Deteksi Dini Kanker Payudara",
         rating: 5,
+        likes: 18,
         date: "24 Okt 2026",
         comment: "Sangat mengapresiasi inovasi Kanal BAPOLES Dinkes Prov. NTT! Pembahasan topik stunting dan penanganan kanker sangat edukatif, lugas, dan aplikatif bagi tenaga medis maupun masyarakat luas."
       },
       {
         name: "Maria Kristina, SKM",
         origin: "Dinkes Kab. Kupang",
+        topic: "Pencegahan dan Penanggulangan Stunting",
         rating: 5,
+        likes: 14,
         date: "22 Okt 2026",
         comment: "Penyampaian materi oleh para dokter spesialis dan narasumber sangat jelas dan interaktif. Portal web ini sangat memudahkan kami dalam mencari rujukan materi penyuluhan promosi kesehatan ke desa-desa."
       },
       {
         name: "Fransiscus Xaverius",
         origin: "Masyarakat Umum - Kupang",
+        topic: "Umum & Portal Web",
         rating: 5,
+        likes: 9,
         date: "20 Okt 2026",
         comment: "Penjelasan tentang pencegahan stunting dan pola hidup sehat bahasa yang digunakan santai (ba'omong) jadi mudah dimengerti keluarga kami. Tampilan website-nya juga cerah, bersih, dan cepat dibuka di HP."
       },
       {
         name: "Ns. Hendrikus Bria, S.Kep",
         origin: "RSUD Prof. Dr. W. Z. Johannes",
+        topic: "Kesehatan Jiwa Remaja",
         rating: 4,
+        likes: 11,
         date: "18 Okt 2026",
         comment: "Konten siaran podcast sangat berbobot dan informatif. Usul untuk episode berikutnya bisa memperbanyak pembahasan kesehatan mental remaja dan tips pertolongan pertama gawat darurat di rumah tangga."
       },
       {
         name: "Theresia Loda, A.Md.Keb",
         origin: "Puskesmas Sikumana",
+        topic: "Pemberian Makanan Bayi dan Anak (PMBA)",
         rating: 5,
+        likes: 7,
         date: "15 Okt 2026",
         comment: "Satu klik ribuan cerita, benar-benar terasa manfaatnya. Kami sering putar rekaman siaran podcast ini di ruang tunggu antrean pasien puskesmas untuk edukasi germas sambil menunggu pelayanan."
       }
@@ -989,6 +1031,64 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       } catch (e) {
         console.error('Error saving reviews to localStorage:', e);
       }
+    }
+
+    // Populate Topik Dropdown from Podcast Data
+    function populateReviewTopics() {
+      const select = document.getElementById('review-topik');
+      if (!select || !podcastsData || podcastsData.length === 0) return;
+      podcastsData.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.materi;
+        opt.text = `Eps. ${p.no} - ${p.materi}`;
+        select.appendChild(opt);
+      });
+    }
+
+    // Character Counter
+    function updateCharCount(el) {
+      const counter = document.getElementById('char-counter');
+      if (counter) counter.innerText = `${el.value.length} / 500`;
+    }
+
+    // Open Review Form from FAB or Buttons
+    function openReviewForm() {
+      switchSheetTab('penilaian');
+      setTimeout(() => {
+        const formCard = document.querySelector('.penilaian-form-card');
+        if (formCard) formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const input = document.getElementById('review-nama');
+        if (input) input.focus();
+      }, 200);
+    }
+
+    // Open Review for specific Episode
+    function openReviewForEpisode(topicTitle) {
+      switchSheetTab('penilaian');
+      setTimeout(() => {
+        const select = document.getElementById('review-topik');
+        if (select) {
+          let found = false;
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === topicTitle || select.options[i].text.includes(topicTitle)) {
+              select.selectedIndex = i;
+              found = true;
+              break;
+            }
+          }
+          if (!found) {
+            const opt = document.createElement('option');
+            opt.value = topicTitle;
+            opt.text = `🎙️ ${topicTitle}`;
+            opt.selected = true;
+            select.appendChild(opt);
+          }
+        }
+        const formCard = document.querySelector('.penilaian-form-card');
+        if (formCard) formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const uraian = document.getElementById('review-uraian');
+        if (uraian) uraian.focus();
+      }, 200);
     }
 
     function selectStar(val) {
@@ -1023,14 +1123,73 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       });
     }
 
+    // Filter Reviews by Stars
+    function filterReviews(rating, btn) {
+      activeReviewFilter = rating;
+      document.querySelectorAll('.review-filter-pill').forEach(el => el.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderReviews();
+    }
+
+    // Like / Upvote a Review
+    function likeReview(index) {
+      const allReviews = getStoredReviews();
+      if (allReviews[index]) {
+        allReviews[index].likes = (allReviews[index].likes || 0) + 1;
+        saveReviews(allReviews);
+        renderReviews();
+      }
+    }
+
     function renderReviews() {
       const container = document.getElementById('review-feed-container');
       if (!container) return;
-      const reviews = getStoredReviews();
+      const allReviews = getStoredReviews();
 
-      container.innerHTML = reviews.map(r => {
+      // Update Filter Pill Counts
+      const countAll = allReviews.length;
+      const count5 = allReviews.filter(r => Number(r.rating) === 5).length;
+      const count4 = allReviews.filter(r => Number(r.rating) === 4).length;
+      const count3 = allReviews.filter(r => Number(r.rating) <= 3).length;
+
+      const cAllEl = document.getElementById('count-all');
+      if (cAllEl) cAllEl.innerText = countAll;
+      const c5El = document.getElementById('count-5');
+      if (c5El) c5El.innerText = count5;
+      const c4El = document.getElementById('count-4');
+      if (c4El) c4El.innerText = count4;
+      const c3El = document.getElementById('count-3');
+      if (c3El) c3El.innerText = count3;
+
+      // Filter
+      const displayedReviews = allReviews.filter((r) => {
+        if (activeReviewFilter === 'ALL') return true;
+        if (activeReviewFilter === 5) return Number(r.rating) === 5;
+        if (activeReviewFilter === 4) return Number(r.rating) === 4;
+        if (activeReviewFilter === 3) return Number(r.rating) <= 3;
+        return true;
+      });
+
+      if (displayedReviews.length === 0) {
+        container.innerHTML = `
+          <div style="background: #ffffff; border: 1.5px dashed #cbd5e1; border-radius: var(--radius-md); padding: 36px 20px; text-align: center; color: var(--text-muted);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">💬</div>
+            <h4 style="color: var(--text-main); margin-bottom: 4px;">Belum ada ulasan untuk filter ini</h4>
+            <p style="font-size: 0.85rem;">Jadilah pengunjung pertama yang memberikan ulasan untuk kategori bintang ini!</p>
+          </div>
+        `;
+        updateReviewStats(allReviews);
+        return;
+      }
+
+      container.innerHTML = displayedReviews.map((r) => {
+        const originalIndex = allReviews.indexOf(r);
         const initials = getInitials(r.name);
         const starStr = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        const topicHtml = r.topic && r.topic !== 'Umum & Portal Web' ? `
+          <div class="review-topic-tag">🎙️ ${escapeHtml(r.topic)}</div>
+        ` : '';
+
         return `
           <div class="review-card">
             <div class="review-card-header">
@@ -1046,12 +1205,18 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
                 <div class="review-date-badge">${escapeHtml(r.date || 'Baru saja')}</div>
               </div>
             </div>
+            ${topicHtml}
             <p class="review-comment-box">${escapeHtml(r.comment)}</p>
+            <div style="display: flex; justify-content: flex-end;">
+              <button class="btn-like-review" onclick="likeReview(${originalIndex})" title="Tandai ulasan ini bermanfaat">
+                👍 Bermanfaat (${r.likes || 0})
+              </button>
+            </div>
           </div>
         `;
       }).join('');
 
-      updateReviewStats(reviews);
+      updateReviewStats(allReviews);
     }
 
     function updateReviewStats(reviews) {
@@ -1082,6 +1247,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       e.preventDefault();
       const nama = document.getElementById('review-nama').value.trim();
       const asal = document.getElementById('review-asal').value.trim();
+      const topicEl = document.getElementById('review-topik');
+      const topic = topicEl ? topicEl.value : 'Umum & Portal Web';
       const rating = parseInt(document.getElementById('review-rating').value, 10) || 5;
       const comment = document.getElementById('review-uraian').value.trim();
 
@@ -1097,7 +1264,9 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       const newReview = {
         name: nama,
         origin: asal,
+        topic: topic,
         rating: rating,
+        likes: 0,
         date: formattedDate,
         comment: comment
       };
@@ -1111,6 +1280,8 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       // Reset form
       document.getElementById('form-penilaian').reset();
       selectStar(5);
+      const counter = document.getElementById('char-counter');
+      if (counter) counter.innerText = '0 / 500';
 
       // Toast notification
       showToast('Terima kasih! Penilaian dan masukan Anda berhasil dikirim.');
