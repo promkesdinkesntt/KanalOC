@@ -644,6 +644,20 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       if (viewEl) viewEl.style.display = 'block';
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Catat perpindahan menu ke Google Sheets
+      const MENU_TITLES = {
+        'beranda': 'Menu: Beranda',
+        'jadwal-podcast': 'Menu: Jadwal Podcast',
+        'katalog-podcast': 'Menu: Katalog Podcast',
+        'tentang': 'Menu: Tentang',
+        'tim-kami': 'Menu: Tim Kami',
+        'kontak': 'Menu: Kontak',
+        'penilaian': 'Menu: Penilaian & Masukan'
+      };
+      if (typeof logActivity === 'function') {
+        logActivity(MENU_TITLES[sheetKey] || `Menu: ${sheetKey}`);
+      }
     }
 
     // Category Filter
@@ -873,6 +887,9 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
     // Video Player Modal
     function openLiveVideo(url, title) {
+      if (typeof logActivity === 'function') {
+        logActivity('Menonton Live: ' + (title || 'Podcast BAPOLES'));
+      }
       let videoId = '';
       if (url.includes('youtube.com/live/')) videoId = url.split('youtube.com/live/')[1].split('?')[0];
       else if (url.includes('youtu.be/')) videoId = url.split('youtu.be/')[1].split('?')[0];
@@ -894,6 +911,9 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
     // Image Modal Lightbox
     function openImageModal(imgSrc, title) {
+      if (typeof logActivity === 'function') {
+        logActivity('Melihat Infografis/Foto: ' + (title || 'Infografis'));
+      }
       const modal = document.getElementById('image-modal');
       const img = document.getElementById('image-modal-img');
       const titleEl = document.getElementById('image-modal-title');
@@ -1357,13 +1377,14 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       }, 4000);
     }
 
-    // ==========================================
-    // PELACAK KUNJUNGAN REAL-TIME KE SPREADSHEET
-    // ==========================================
-    function logVisitorSession() {
+    // ========================================================
+    // PELACAK AKTIVITAS & KUNJUNGAN REAL-TIME KE SPREADSHEET
+    // ========================================================
+    let lastLoggedActivity = '';
+    function logActivity(activityName) {
       if (!GOOGLE_SHEETS_WEBAPP_URL) return;
-      // Gunakan sessionStorage agar dicatat 1 kali per sesi kunjungan (tidak menduplikasi saat refresh halaman)
-      if (sessionStorage.getItem('bapoles_visit_recorded')) return;
+      if (!activityName || activityName === lastLoggedActivity) return;
+      lastLoggedActivity = activityName;
 
       try {
         const ua = navigator.userAgent || '';
@@ -1392,7 +1413,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
         const formData = new FormData();
         formData.append('action', 'log_visit');
-        formData.append('page', 'Beranda');
+        formData.append('page', activityName);
         formData.append('device', device);
         formData.append('browser', browser);
         formData.append('screen', screenRes);
@@ -1403,14 +1424,17 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           mode: 'no-cors',
           body: formData
         }).then(() => {
-          sessionStorage.setItem('bapoles_visit_recorded', 'true');
-          console.log('✅ Kunjungan pengunjung berhasil dicatat ke Google Sheets');
+          console.log(`✅ Aktivitas dicatat ke Google Sheets: ${activityName}`);
         }).catch(err => {
-          console.warn('Gagal mencatat kunjungan:', err);
+          console.warn('Pelacak:', err);
         });
       } catch (err) {
-        console.warn('Pelacak kunjungan:', err);
+        console.warn('Pelacak:', err);
       }
+    }
+
+    function logVisitorSession() {
+      logActivity('Membuka Web (Beranda)');
     }
   </script>
 </body>
