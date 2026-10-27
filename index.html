@@ -627,6 +627,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       populateReviewTopics();
       selectStar(5);
       renderReviews();
+      logVisitorSession();
     });
 
     // 6 Sheet Menu Switcher
@@ -962,7 +963,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     // SISTEM PENILAIAN & MASUKAN PENGUNJUNG WEB
     // ==========================================
     // URL Deployment Web App Google Apps Script untuk arsip Google Sheets:
-    const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycby7x0zJxP5St15b_76b8t-IA0QiLSADhLV55U2xCRqCHqfCP_4Jrp-1it7X-OoLFncX0A/exec";
+    const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwPApiMmAhcxrcAfJ6zPkxgHvKEscuCf3B63F1o3kb5EAxVQ7OVPTFB0ajcSKXpZQA0Uw/exec";
 
     let currentSelectedStar = 5;
     let activeReviewFilter = 'ALL';
@@ -1310,6 +1311,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       if (typeof GOOGLE_SHEETS_WEBAPP_URL !== 'undefined' && GOOGLE_SHEETS_WEBAPP_URL) {
         try {
           const formData = new FormData();
+          formData.append('action', 'review');
           formData.append('date', formattedDate);
           formData.append('name', nama);
           formData.append('origin', asal);
@@ -1353,6 +1355,62 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       toastTimer = setTimeout(() => {
         toast.classList.remove('show');
       }, 4000);
+    }
+
+    // ==========================================
+    // PELACAK KUNJUNGAN REAL-TIME KE SPREADSHEET
+    // ==========================================
+    function logVisitorSession() {
+      if (!GOOGLE_SHEETS_WEBAPP_URL) return;
+      // Gunakan sessionStorage agar dicatat 1 kali per sesi kunjungan (tidak menduplikasi saat refresh halaman)
+      if (sessionStorage.getItem('bapoles_visit_recorded')) return;
+
+      try {
+        const ua = navigator.userAgent || '';
+        let device = 'Laptop / PC';
+        if (/Android/i.test(ua)) device = 'HP Android';
+        else if (/iPhone|iPad|iPod/i.test(ua)) device = 'iPhone / iPad (iOS)';
+        else if (/Windows/i.test(ua)) device = 'Laptop / PC Windows';
+        else if (/Macintosh|Mac OS/i.test(ua)) device = 'MacBook / Mac';
+        else if (/Linux/i.test(ua)) device = 'Linux PC';
+
+        let browser = 'Lainnya';
+        if (/Edg/i.test(ua)) browser = 'Microsoft Edge';
+        else if (/Chrome|CriOS/i.test(ua) && !/Edge|OPR/i.test(ua)) browser = 'Google Chrome';
+        else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
+        else if (/Firefox|FxiOS/i.test(ua)) browser = 'Mozilla Firefox';
+
+        const screenRes = (window.screen && window.screen.width) ? `${window.screen.width} x ${window.screen.height}` : '-';
+        let ref = 'Langsung (Direct)';
+        if (document.referrer) {
+          try {
+            ref = new URL(document.referrer).hostname || document.referrer;
+          } catch(e) {
+            ref = document.referrer;
+          }
+        }
+
+        const formData = new FormData();
+        formData.append('action', 'log_visit');
+        formData.append('page', 'Beranda');
+        formData.append('device', device);
+        formData.append('browser', browser);
+        formData.append('screen', screenRes);
+        formData.append('referrer', ref);
+
+        fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData
+        }).then(() => {
+          sessionStorage.setItem('bapoles_visit_recorded', 'true');
+          console.log('✅ Kunjungan pengunjung berhasil dicatat ke Google Sheets');
+        }).catch(err => {
+          console.warn('Gagal mencatat kunjungan:', err);
+        });
+      } catch (err) {
+        console.warn('Pelacak kunjungan:', err);
+      }
     }
   </script>
 </body>
