@@ -961,6 +961,9 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
     // ==========================================
     // SISTEM PENILAIAN & MASUKAN PENGUNJUNG WEB
     // ==========================================
+    // URL Deployment Web App Google Apps Script untuk arsip Google Sheets:
+    const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycby7x0zJxP5St15b_76b8t-IA0QiLSADhLV55U2xCRqCHqfCP_4Jrp-1it7X-OoLFncX0A/exec";
+
     let currentSelectedStar = 5;
     let activeReviewFilter = 'ALL';
     const STAR_LABELS = {
@@ -1303,7 +1306,30 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       reviews.unshift(newReview);
       saveReviews(reviews);
 
-      renderReviews();
+      // Kirim otomatis ke Google Sheets jika URL telah dipasang
+      if (typeof GOOGLE_SHEETS_WEBAPP_URL !== 'undefined' && GOOGLE_SHEETS_WEBAPP_URL) {
+        try {
+          const formData = new FormData();
+          formData.append('date', formattedDate);
+          formData.append('name', nama);
+          formData.append('origin', asal);
+          formData.append('topic', topic);
+          formData.append('rating', rating);
+          formData.append('comment', comment);
+
+          fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+          }).then(() => {
+            console.log('✅ Ulasan berhasil dikirim ke Google Sheets');
+          }).catch(err => {
+            console.warn('⚠️ Gagal mengirim ke Google Sheets:', err);
+          });
+        } catch (err) {
+          console.warn('⚠️ Kesalahan saat menyiapkan data:', err);
+        }
+      }
 
       // Reset form
       document.getElementById('form-penilaian').reset();
