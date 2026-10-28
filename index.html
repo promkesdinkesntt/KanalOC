@@ -854,7 +854,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         `).join('');
 
         const playBtn = item.youtubeLink ? `
-          <button class="btn-play-video" onclick="openLiveVideo('${escapeHtml(item.youtubeLink)}', '${escapeHtml(item.materi)}')">
+          <button class="btn-play-video" onclick="playEpisodeVideo(${item.no})">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             Tonton Live
           </button>
@@ -863,7 +863,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         const thumbImg = item.foto || (item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : '');
 
         const thumbHtml = thumbImg ? `
-          <div class="video-thumb-box" onclick="openLiveVideo('${escapeHtml(item.youtubeLink)}', '${escapeHtml(item.materi)}')">
+          <div class="video-thumb-box" onclick="playEpisodeVideo(${item.no})">
             <img src="${escapeHtml(thumbImg)}" alt="${escapeHtml(item.materi)}" class="video-thumb-img" loading="lazy" data-yt="${escapeHtml(item.youtubeId || '')}" onerror="handleImageFallback(this)">
             <div class="play-icon-overlay">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -892,7 +892,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
                 <div style="color:var(--text-muted);">${escapeHtml(item.waktu)}</div>
               </div>
               <div style="display: flex; gap: 8px; align-items: center;">
-                <button class="btn-review-mini" title="Beri ulasan untuk episode ini" onclick="openReviewForEpisode('${escapeHtml(item.materi).replace(/'/g, "\\'")}')">
+                <button class="btn-review-mini" title="Beri ulasan untuk episode ini" onclick="openReviewForEpisodeByNo(${item.no})">
                   ⭐ Ulas
                 </button>
                 ${playBtn}
@@ -903,7 +903,19 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       }).join('');
     }
 
+    function playEpisodeVideo(no) {
+      const ep = (podcastsData || []).find(e => Number(e.no) === Number(no));
+      if (ep && ep.youtubeLink) {
+        openLiveVideo(ep.youtubeLink, ep.materi);
+      }
+    }
 
+    function openReviewForEpisodeByNo(no) {
+      const ep = (podcastsData || []).find(e => Number(e.no) === Number(no));
+      if (ep) {
+        openReviewForEpisode(ep.materi);
+      }
+    }
 
     // Video Player Modal
     function openLiveVideo(url, title) {
@@ -911,9 +923,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         logActivity('Menonton Live: ' + (title || 'Podcast BAPOLES'));
       }
       let videoId = '';
-      if (url.includes('youtube.com/live/')) videoId = url.split('youtube.com/live/')[1].split('?')[0];
-      else if (url.includes('youtu.be/')) videoId = url.split('youtu.be/')[1].split('?')[0];
-      else if (url.includes('v=')) videoId = url.split('v=')[1].split('&')[0];
+      if (!url) return;
+      if (url.includes('youtube.com/live/')) videoId = url.split('youtube.com/live/')[1].split('?')[0].split('&')[0];
+      else if (url.includes('youtu.be/')) videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
+      else if (url.includes('v=')) videoId = url.split('v=')[1].split('&')[0].split('?')[0];
 
       if (videoId) {
         document.getElementById('modal-video-title').innerText = title || 'Live Podcast BAPOLES';

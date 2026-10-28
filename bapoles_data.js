@@ -201,7 +201,7 @@ window.BAPOLES_DATA = {
     {
       "no": 2,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara\r\nApa itu kanker payudara dan mengapa bisa terjadi?",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara - Apa itu kanker payudara dan mengapa bisa terjadi?",
       "youtubeLink": "https://www.youtube.com/live/zICnXyGhbx4?si=LeQqv7LiWK7BFfRZ",
       "youtubeId": "zICnXyGhbx4",
       "foto": "image3.jpeg",
@@ -214,7 +214,7 @@ window.BAPOLES_DATA = {
     {
       "no": 3,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker\r\nPencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker - Pencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
       "youtubeLink": "https://www.youtube.com/live/tbMIYu6RyHE?si=o2p9-MnLAsN2cxB4",
       "youtubeId": "tbMIYu6RyHE",
       "foto": "image3.jpeg",
@@ -227,7 +227,7 @@ window.BAPOLES_DATA = {
     {
       "no": 4,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat\r\nTantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat - Tantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
       "youtubeLink": "https://www.youtube.com/live/hpWJpp4sD5Y?si=XWN5KVHEbRV8FHEM",
       "youtubeId": "hpWJpp4sD5Y",
       "foto": "image3.jpeg",
@@ -240,7 +240,7 @@ window.BAPOLES_DATA = {
     {
       "no": 5,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker\r\nGizi Cerdas dan herbal bijak\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker - Gizi Cerdas dan herbal bijak\"",
       "youtubeLink": "https://www.youtube.com/live/JAddHTM2Xi8?si=QulUdA-nWV8GIsr3",
       "youtubeId": "JAddHTM2Xi8",
       "foto": "image3.jpeg",
@@ -253,7 +253,7 @@ window.BAPOLES_DATA = {
     {
       "no": 6,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan\r\nDukungan keluarga dan kualitas hidup pasien\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan - Dukungan keluarga dan kualitas hidup pasien\"",
       "youtubeLink": "https://www.youtube.com/live/lOpLBPT2lqY?si=562wKPYQfSx_jk89",
       "youtubeId": "lOpLBPT2lqY",
       "foto": "image3.jpeg",
@@ -606,7 +606,7 @@ window.BAPOLES_DATA = {
     {
       "no": 2,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara\r\nApa itu kanker payudara dan mengapa bisa terjadi?",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker payudara, katong su tahu ko?\" kupas tuntas kanker payudara - Apa itu kanker payudara dan mengapa bisa terjadi?",
       "youtubeLink": "https://www.youtube.com/live/zICnXyGhbx4?si=LeQqv7LiWK7BFfRZ",
       "youtubeId": "zICnXyGhbx4",
       "foto": "image3.jpeg",
@@ -619,7 +619,7 @@ window.BAPOLES_DATA = {
     {
       "no": 3,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker\r\nPencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Mulai hari ini, sekarang su! Cegah kanker - Pencegahan kanker (cara sederhana mencegah kanker sejak dini)\"",
       "youtubeLink": "https://www.youtube.com/live/tbMIYu6RyHE?si=o2p9-MnLAsN2cxB4",
       "youtubeId": "tbMIYu6RyHE",
       "foto": "image3.jpeg",
@@ -632,7 +632,7 @@ window.BAPOLES_DATA = {
     {
       "no": 4,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat\r\nTantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Bagandeng katong lawan kanker: cerita pejuang hebat - Tantangan yang dihadapi pasien kanker serta cerita inspiratif dari pejuang kanker\"",
       "youtubeLink": "https://www.youtube.com/live/hpWJpp4sD5Y?si=XWN5KVHEbRV8FHEM",
       "youtubeId": "hpWJpp4sD5Y",
       "foto": "image3.jpeg",
@@ -645,7 +645,7 @@ window.BAPOLES_DATA = {
     {
       "no": 5,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker\r\nGizi Cerdas dan herbal bijak\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Gizi deng herbal yang karmana untuk lawan kanker - Gizi Cerdas dan herbal bijak\"",
       "youtubeLink": "https://www.youtube.com/live/JAddHTM2Xi8?si=QulUdA-nWV8GIsr3",
       "youtubeId": "JAddHTM2Xi8",
       "foto": "image3.jpeg",
@@ -658,7 +658,7 @@ window.BAPOLES_DATA = {
     {
       "no": 6,
       "kategori": "Mitra",
-      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan\r\nDukungan keluarga dan kualitas hidup pasien\"",
+      "materi": "Pekan Podcast, cancer awarness week-NTT \"Kanker bukan akhir dari segalanya, katong masih punya harapan - Dukungan keluarga dan kualitas hidup pasien\"",
       "youtubeLink": "https://www.youtube.com/live/lOpLBPT2lqY?si=562wKPYQfSx_jk89",
       "youtubeId": "lOpLBPT2lqY",
       "foto": "image3.jpeg",
