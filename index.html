@@ -783,7 +783,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
               <img src="${escapeHtml(k.foto)}" alt="${escapeHtml(k.nama)}" class="ketua-img" loading="lazy" onerror="handleImageFallback(this)">
             </div>
             <div>
-              <span class="leader-role-badge" style="background:#dbeafe; color:#1d4ed8;">Ketua Tim Kerja</span>
+              <span class="leader-role-badge" style="background:#dbeafe; color:#1d4ed8;">${escapeHtml(k.role || 'Sekretaris Tim')}</span>
               <h4 style="font-size:1.25rem; font-weight:800; color:var(--text-main); margin-bottom:6px;">${escapeHtml(k.nama)}</h4>
               <p style="font-size:0.95rem; color:var(--text-sub); line-height:1.4;">${escapeHtml(k.jabatan)}</p>
             </div>
