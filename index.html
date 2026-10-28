@@ -516,6 +516,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
               <div class="score-sub">Skor Rata-Rata Pengunjung</div>
             </div>
             <div class="summary-pill-group">
+              <div class="summary-metric-card" style="background: #f0f9ff; border: 1.5px solid #bae6fd;">
+                <div class="val" id="summary-total-visitors" style="color: #0284c7;">83+</div>
+                <div class="lbl" style="color: #0369a1;">Total Pengunjung Web 👥</div>
+              </div>
               <div class="summary-metric-card">
                 <div class="val" id="summary-total-reviews">5</div>
                 <div class="lbl">Total Ulasan Masuk</div>
@@ -636,6 +640,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       selectStar(5);
       renderReviews();
       fetchLiveReviews(false);
+      fetchLiveVisitorCount();
       logVisitorSession();
     });
 
@@ -654,9 +659,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Jika membuka tab penilaian, sinkronkan ulasan terbaru dari Google Sheets
+      // Jika membuka tab penilaian, sinkronkan ulasan dan jumlah pengunjung dari Google Sheets
       if (sheetKey === 'penilaian') {
         fetchLiveReviews(false);
+        fetchLiveVisitorCount();
       }
 
       // Catat perpindahan menu ke Google Sheets
@@ -1231,6 +1237,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             saveReviews(merged);
             renderReviews();
             if (showFeedback) {
+              fetchLiveVisitorCount();
               showToast('✅ Berhasil memuat ' + liveReviews.length + ' ulasan terbaru dari Google Spreadsheet!');
             }
           }
@@ -1238,6 +1245,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       } catch (err) {
         console.warn('Pelacak Ulasan: Menggunakan data cache lokal:', err);
         if (showFeedback) {
+          fetchLiveVisitorCount();
           showToast('ℹ️ Menggunakan data ulasan tersimpan saat ini.');
         }
       } finally {
@@ -1246,6 +1254,40 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           refreshBtn.innerText = '🔄 Perbarui Data';
           refreshBtn.disabled = false;
         }
+      }
+    }
+
+    // Endpoint Google Visualization API untuk menghitung total log kunjungan real-time
+    const SPREADSHEET_LOG_GVIZ_URL = "https://docs.google.com/spreadsheets/d/1WWX_O9Tve7R2QomU825CovruDKaFeL32x_6e8Pg-Ths/gviz/tq?tqx=out:json&sheet=Log%20Kunjungan&tq=select%20count(A)";
+
+    async function fetchLiveVisitorCount() {
+      const visitorEl = document.getElementById('summary-total-visitors');
+      const cached = localStorage.getItem('bapoles_total_visitors');
+      if (cached && visitorEl && (visitorEl.innerText === '--' || !visitorEl.innerText)) {
+        visitorEl.innerText = cached;
+      }
+
+      try {
+        const response = await fetch(SPREADSHEET_LOG_GVIZ_URL + '&_t=' + Date.now());
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const text = await response.text();
+
+        const start = text.indexOf('{');
+        const end = text.lastIndexOf('}');
+        if (start === -1 || end === -1) throw new Error('Format respon GViz log tidak valid');
+
+        const gvizData = JSON.parse(text.substring(start, end + 1));
+        if (gvizData && gvizData.table && Array.isArray(gvizData.table.rows) && gvizData.table.rows.length > 0) {
+          const rawCount = gvizData.table.rows[0].c && gvizData.table.rows[0].c[0] ? gvizData.table.rows[0].c[0].v : null;
+          const count = Number(rawCount) || 0;
+          if (count > 0) {
+            const formatted = count.toLocaleString('id-ID');
+            if (visitorEl) visitorEl.innerText = formatted;
+            localStorage.setItem('bapoles_total_visitors', formatted);
+          }
+        }
+      } catch (err) {
+        console.warn('Pelacak Pengunjung:', err);
       }
     }
 
@@ -1611,6 +1653,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           body: formData
         }).then(() => {
           console.log(`✅ Aktivitas dicatat ke Google Sheets: ${activityName}`);
+          // Perbarui hitungan total pengunjung setelah jeda singkat
+          setTimeout(() => {
+            if (typeof fetchLiveVisitorCount === 'function') fetchLiveVisitorCount();
+          }, 2500);
         }).catch(err => {
           console.warn('Pelacak:', err);
         });
