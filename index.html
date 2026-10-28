@@ -168,27 +168,28 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
 
       <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
         <div>
-          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">🎬 Galeri Siaran Podcast BAPOLES</h3>
-          <p style="color: var(--text-sub); font-size: 0.92rem;">Pilih kategori siaran edukasi kesehatan atau saksikan tayangan langsung YouTube di bawah ini.</p>
+          <div class="badge-pill" style="margin-bottom: 6px; font-size: 0.75rem; padding: 3px 10px;">
+            ✨ Siaran Terbaru
+          </div>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">🎬 Siaran Podcast Terbaru BAPOLES</h3>
+          <p style="color: var(--text-sub); font-size: 0.92rem;">Saksikan 3 tayangan siaran edukasi kesehatan paling mutakhir dari Kanal BAPOLES.</p>
         </div>
-      </div>
-
-      <!-- Category Filter Bar -->
-      <div class="category-filter-bar">
-        <button class="cat-pill active" onclick="filterCategory('ALL', this)">✨ Semua</button>
-        <button class="cat-pill" onclick="filterCategory('Mitra', this)">🤝 Mitra</button>
-        <button class="cat-pill" onclick="filterCategory('RSKD Jiwa Naimata', this)">🧠 RSKD Jiwa Naimata</button>
-        <button class="cat-pill" onclick="filterCategory('Pencegahan dan Pengendalian Penyakit', this)">🛡️ Bidang P2P</button>
-        <button class="cat-pill" onclick="filterCategory('Pelayanan Kesehatan', this)">🏥 Bidang Yankes</button>
-        <button class="cat-pill" onclick="filterCategory('Tenaga Kesehatan', this)">👩‍⚕️ Bidang Nakes</button>
-        <button class="cat-pill" onclick="filterCategory('Kesehatan Masyarakat', this)">👶 Bidang Kesmas</button>
-        <button class="cat-pill" onclick="filterCategory('UPTD Labkes', this)">🔬 UPTD Labkes</button>
-        <button class="cat-pill" onclick="filterCategory('UPTD Latnakes', this)">🎓 UPTD Latnakes</button>
-        <button class="cat-pill" onclick="filterCategory('Sekretariat', this)">🏛️ Sekretariat</button>
+        <button onclick="switchSheetTab('katalog-podcast')" style="background: #ffffff; border: 1.5px solid #0284c7; color: #0284c7; font-weight: 700; padding: 9px 18px; border-radius: var(--radius-pill); font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);" onmouseover="this.style.background='#0284c7'; this.style.color='#ffffff';" onmouseout="this.style.background='#ffffff'; this.style.color='#0284c7';">
+          <span>🎙️ Buka Katalog Lengkap (31 Episode)</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
       </div>
 
       <div class="episodes-grid" id="beranda-grid-container">
-        <!-- Rendered via JS -->
+        <!-- Rendered via JS (Max 3 latest episodes) -->
+      </div>
+
+      <!-- Tombol Akses Cepat ke Katalog Lengkap -->
+      <div style="text-align: center; margin-top: 24px; margin-bottom: 36px;">
+        <button onclick="switchSheetTab('katalog-podcast')" style="background: var(--primary-gradient); color: #ffffff; border: none; font-weight: 700; padding: 13px 28px; border-radius: var(--radius-pill); font-size: 0.92rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25); transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <span>🎙️ Lihat Seluruh 31 Episode Siaran di Katalog Podcast</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
       </div>
     </section>
 
@@ -631,7 +632,9 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       const spEl = document.getElementById('stat-speakers-num');
       if (spEl) spEl.innerText = `${speakerSet.size}+`;
 
-      renderPodcastGrid('beranda-grid-container', podcastsData);
+      // Beranda disederhanakan: hanya menampilkan maksimal 3 episode terbaru
+      const berandaLatest = [...podcastsData].sort((a, b) => b.no - a.no).slice(0, 3);
+      renderPodcastGrid('beranda-grid-container', berandaLatest);
       renderPodcastGrid('katalog-grid-container', podcastsData);
       renderPodcastGrid('jadwal-grid-container', podcastsData.slice(0, 6));
       renderJadwalAgenda();
@@ -722,7 +725,12 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         return matchQ && matchC;
       });
 
-      renderPodcastGrid('beranda-grid-container', filtered);
+      // Di Beranda selalu dibatasi maksimal 3 episode terbaru
+      const berandaItems = query
+        ? filtered.slice(0, 3)
+        : [...podcastsData].sort((a, b) => b.no - a.no).slice(0, 3);
+
+      renderPodcastGrid('beranda-grid-container', berandaItems);
       renderPodcastGrid('katalog-grid-container', filtered);
     }
 
