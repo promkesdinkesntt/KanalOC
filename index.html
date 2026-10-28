@@ -528,8 +528,16 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           </div>
 
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">💬 Ulasan & Masukan Pengunjung</h3>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Terverifikasi Pengunjung</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+              💬 Ulasan & Masukan Pengunjung
+              <span id="live-sync-indicator" style="font-size: 0.72rem; font-weight: 600; color: #16a34a; background: #dcfce7; padding: 2px 8px; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px;">
+                <span style="display: inline-block; width: 6px; height: 6px; background: #22c55e; border-radius: 50%;"></span>
+                Live Spreadsheet
+              </span>
+            </h3>
+            <button type="button" id="btn-refresh-reviews" onclick="fetchLiveReviews(true)" style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 5px 12px; font-size: 0.78rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; align-items: center; gap: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: var(--transition);" title="Muat ulasan terbaru dari Google Sheets">
+              🔄 Perbarui Data
+            </button>
           </div>
 
           <!-- Filter Pill Bintang -->
@@ -627,6 +635,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       populateReviewTopics();
       selectStar(5);
       renderReviews();
+      fetchLiveReviews(false);
       logVisitorSession();
     });
 
@@ -644,6 +653,11 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       if (viewEl) viewEl.style.display = 'block';
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Jika membuka tab penilaian, sinkronkan ulasan terbaru dari Google Sheets
+      if (sheetKey === 'penilaian') {
+        fetchLiveReviews(false);
+      }
 
       // Catat perpindahan menu ke Google Sheets
       const MENU_TITLES = {
@@ -1085,6 +1099,156 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       }
     }
 
+    // Endpoint Google Visualization API untuk membaca tab 'Penilaian' secara langsung & real-time
+    const SPREADSHEET_REVIEWS_GVIZ_URL = "https://docs.google.com/spreadsheets/d/1WWX_O9Tve7R2QomU825CovruDKaFeL32x_6e8Pg-Ths/gviz/tq?tqx=out:json&sheet=Penilaian";
+
+    function formatReviewDate(rawDate) {
+      if (!rawDate) return 'Baru saja';
+      if (typeof rawDate === 'string' && /^\d{4}-\d{2}-\d{2}/.test(rawDate)) {
+        const parts = rawDate.split(' ')[0].split('-');
+        const year = parts[0];
+        const monthIdx = parseInt(parts[1], 10) - 1;
+        const day = parseInt(parts[2], 10);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+        if (months[monthIdx]) {
+          return `${day} ${months[monthIdx]} ${year}`;
+        }
+      }
+      return String(rawDate);
+    }
+
+    function parseSheetRows(rows) {
+      const parsed = [];
+      rows.forEach((r) => {
+        if (!r || !r.c) return;
+        const getVal = (idx) => {
+          const cell = r.c[idx];
+          if (!cell) return '';
+          return (cell.f !== undefined && cell.f !== null) ? String(cell.f).trim() : ((cell.v !== undefined && cell.v !== null) ? String(cell.v).trim() : '');
+        };
+
+        const rawDate = getVal(0);
+        const name = getVal(1) || 'Anonim';
+        const origin = getVal(2) || 'NTT';
+        const topic = getVal(3) || 'Umum & Portal Web';
+        const rawRating = getVal(4);
+        const comment = getVal(5);
+
+        // Abaikan baris kosong atau header
+        if (!comment || comment.toLowerCase() === 'uraian' || comment.toLowerCase().includes('masukan') || comment.toLowerCase().includes('saran')) return;
+        if (name.toLowerCase() === 'nama' || name.toLowerCase().includes('nama pengunjung')) return;
+
+        let rating = parseInt(rawRating, 10);
+        if (isNaN(rating) || rating < 1 || rating > 5) rating = 5;
+
+        parsed.push({
+          name: name,
+          origin: origin,
+          topic: topic,
+          rating: rating,
+          likes: 0,
+          date: formatReviewDate(rawDate),
+          comment: comment
+        });
+      });
+
+      // Urutkan dari baris terakhir (terbaru) ke pertama
+      return parsed.reverse();
+    }
+
+    function mergeReviews(liveReviews, baseReviews, existingStored) {
+      const merged = [];
+      const seenComments = new Set();
+
+      // 1. Prioritaskan ulasan lokal yang mungkin baru dikirim tapi belum tersinkron di spreadsheet
+      if (Array.isArray(existingStored)) {
+        for (const r of existingStored) {
+          const isBase = baseReviews.some(b => b.comment.trim() === r.comment.trim());
+          const isLive = liveReviews.some(l => l.comment.trim() === r.comment.trim());
+          if (!isBase && !isLive) {
+            merged.push(r);
+            seenComments.add(r.comment.trim().toLowerCase());
+          }
+        }
+      }
+
+      // 2. Masukkan semua ulasan live dari Google Spreadsheet (yang terbaru berada di atas)
+      for (const r of liveReviews) {
+        const key = r.comment.trim().toLowerCase();
+        if (!seenComments.has(key)) {
+          const existing = (existingStored || []).find(e => e.comment.trim().toLowerCase() === key);
+          if (existing && existing.likes) {
+            r.likes = existing.likes;
+          }
+          merged.push(r);
+          seenComments.add(key);
+        }
+      }
+
+      // 3. Masukkan ulasan dasar/bawaan (DEFAULT_REVIEWS) jika belum ada
+      for (const b of baseReviews) {
+        const key = b.comment.trim().toLowerCase();
+        if (!seenComments.has(key)) {
+          const existing = (existingStored || []).find(e => e.comment.trim().toLowerCase() === key);
+          const likes = (existing && typeof existing.likes === 'number') ? existing.likes : b.likes;
+          merged.push({ ...b, likes });
+          seenComments.add(key);
+        }
+      }
+
+      return merged;
+    }
+
+    let isFetchingLiveReviews = false;
+    async function fetchLiveReviews(showFeedback = false) {
+      if (isFetchingLiveReviews) return;
+      isFetchingLiveReviews = true;
+
+      const refreshBtn = document.getElementById('btn-refresh-reviews');
+      if (refreshBtn) {
+        refreshBtn.innerText = '⏳ Memuat...';
+        refreshBtn.disabled = true;
+      }
+
+      try {
+        const cacheBuster = '&_t=' + Date.now();
+        const response = await fetch(SPREADSHEET_REVIEWS_GVIZ_URL + cacheBuster);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const text = await response.text();
+
+        const start = text.indexOf('{');
+        const end = text.lastIndexOf('}');
+        if (start === -1 || end === -1) throw new Error('Format respon Google Sheets tidak valid');
+
+        const jsonStr = text.substring(start, end + 1);
+        const gvizData = JSON.parse(jsonStr);
+
+        if (gvizData && gvizData.table && Array.isArray(gvizData.table.rows)) {
+          const liveReviews = parseSheetRows(gvizData.table.rows);
+          if (liveReviews.length > 0) {
+            const currentStored = getStoredReviews();
+            const merged = mergeReviews(liveReviews, DEFAULT_REVIEWS, currentStored);
+            saveReviews(merged);
+            renderReviews();
+            if (showFeedback) {
+              showToast('✅ Berhasil memuat ' + liveReviews.length + ' ulasan terbaru dari Google Spreadsheet!');
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('Pelacak Ulasan: Menggunakan data cache lokal:', err);
+        if (showFeedback) {
+          showToast('ℹ️ Menggunakan data ulasan tersimpan saat ini.');
+        }
+      } finally {
+        isFetchingLiveReviews = false;
+        if (refreshBtn) {
+          refreshBtn.innerText = '🔄 Perbarui Data';
+          refreshBtn.disabled = false;
+        }
+      }
+    }
+
     // Populate Topik Dropdown from Podcast Data
     function populateReviewTopics() {
       const select = document.getElementById('review-topik');
@@ -1327,6 +1491,18 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       reviews.unshift(newReview);
       saveReviews(reviews);
 
+      // Tampilkan seketika di feed ulasan & perbarui statistik di layar
+      renderReviews();
+
+      // Reset form
+      document.getElementById('form-penilaian').reset();
+      selectStar(5);
+      const counter = document.getElementById('char-counter');
+      if (counter) counter.innerText = '0 / 500';
+
+      // Notifikasi konfirmasi berhasil
+      showToast('Terima kasih! Penilaian dan masukan Anda berhasil dikirim.');
+
       // Kirim otomatis ke Google Sheets jika URL telah dipasang
       if (typeof GOOGLE_SHEETS_WEBAPP_URL !== 'undefined' && GOOGLE_SHEETS_WEBAPP_URL) {
         try {
@@ -1345,6 +1521,10 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
             body: formData
           }).then(() => {
             console.log('✅ Ulasan berhasil dikirim ke Google Sheets');
+            // Sinkronkan kembali dengan data Google Sheets setelah 2.5 detik
+            setTimeout(() => {
+              fetchLiveReviews(false);
+            }, 2500);
           }).catch(err => {
             console.warn('⚠️ Gagal mengirim ke Google Sheets:', err);
           });
@@ -1352,15 +1532,6 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           console.warn('⚠️ Kesalahan saat menyiapkan data:', err);
         }
       }
-
-      // Reset form
-      document.getElementById('form-penilaian').reset();
-      selectStar(5);
-      const counter = document.getElementById('char-counter');
-      if (counter) counter.innerText = '0 / 500';
-
-      // Toast notification
-      showToast('Terima kasih! Penilaian dan masukan Anda berhasil dikirim.');
     }
 
     let toastTimer = null;
