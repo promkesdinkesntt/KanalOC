@@ -1378,13 +1378,17 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
       if (c3El) c3El.innerText = count3;
 
       // Filter
-      const displayedReviews = allReviews.filter((r) => {
+      const filteredReviews = allReviews.filter((r) => {
         if (activeReviewFilter === 'ALL') return true;
         if (activeReviewFilter === 5) return Number(r.rating) === 5;
         if (activeReviewFilter === 4) return Number(r.rating) === 4;
         if (activeReviewFilter === 3) return Number(r.rating) <= 3;
         return true;
       });
+
+      // Tampilkan maksimal 4 ulasan terbaru sesuai permintaan
+      const MAX_DISPLAYED_REVIEWS = 4;
+      const displayedReviews = filteredReviews.slice(0, MAX_DISPLAYED_REVIEWS);
 
       if (displayedReviews.length === 0) {
         container.innerHTML = `
@@ -1398,7 +1402,7 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
         return;
       }
 
-      container.innerHTML = displayedReviews.map((r) => {
+      const reviewsHtml = displayedReviews.map((r) => {
         const originalIndex = allReviews.indexOf(r);
         const initials = getInitials(r.name);
         const starStr = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
@@ -1431,6 +1435,17 @@ Menyajikan edukasi, kebijakan, serta program-program strategis dengan bahasa yan
           </div>
         `;
       }).join('');
+
+      let noteHtml = '';
+      if (filteredReviews.length > MAX_DISPLAYED_REVIEWS) {
+        noteHtml = `
+          <div style="text-align: center; padding: 12px 16px; font-size: 0.82rem; color: var(--text-muted); background: #f8fafc; border-radius: var(--radius-md); border: 1px dashed #cbd5e1; margin-top: 10px;">
+            📌 Menampilkan <strong>4 ulasan terbaru</strong> (dari total ${filteredReviews.length} ulasan yang tercatat).
+          </div>
+        `;
+      }
+
+      container.innerHTML = reviewsHtml + noteHtml;
 
       updateReviewStats(allReviews);
     }
