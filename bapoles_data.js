@@ -27,19 +27,19 @@ window.BAPOLES_DATA = {
         "nama": "Ruth D. Laiskodat, S.Si, Apt., MM",
         "jabatan": "Kepala Dinas Kesehatan Provinsi NTT",
         "role": "Pembina",
-        "foto": "image29.jpeg"
+        "foto": "image46.jpeg"
       },
       {
         "nama": "Fransiskus A. Wotan, S.Sos",
         "jabatan": "Sekretaris Dinas Kesehatan Provinsi NTT",
         "role": "Penanggung Jawab",
-        "foto": "image42.png"
+        "foto": "image59.png"
       },
       {
         "nama": "Damiana V. Djahari, SKM, M.Kes",
         "jabatan": "Kepala Bidang Kesehatan Masyarakat",
         "role": "Ketua Tim",
-        "foto": "image30.jpeg"
+        "foto": "image47.jpeg"
       }
     ],
     "timkerPromkes": {
@@ -48,70 +48,70 @@ window.BAPOLES_DATA = {
         "nama": "Christiani J.F.L.R. Goring, SKM",
         "jabatan": "Ketua Timker Promosi Kesehatan dan Pemberdayaan Mayarakat",
         "role": "Sekretaris Tim",
-        "foto": "image31.jpeg"
+        "foto": "image48.jpeg"
       },
       "anggota": [
         {
           "nama": "Filmon Banunaek, S.Kom, MM",
           "role": "Anggota Timker",
-          "foto": "image33.jpeg"
+          "foto": "image50.jpeg"
         },
         {
           "nama": "Sutarmi, Amd.KL",
           "role": "Anggota Timker",
-          "foto": "image32.jpeg"
+          "foto": "image49.jpeg"
         },
         {
           "nama": "Oma Bureni, SKM",
           "role": "Anggota Timker",
-          "foto": "image34.jpeg"
+          "foto": "image51.jpeg"
         },
         {
           "nama": "Meilia Rohmawati, A.Md.Keb",
           "role": "Anggota Timker",
-          "foto": "image35.jpeg"
+          "foto": "image52.jpeg"
         },
         {
           "nama": "Farah Murwitasari, A.Md.Kes",
           "role": "Anggota Timker",
-          "foto": "image36.jpeg"
+          "foto": "image53.jpeg"
         },
         {
           "nama": "Helen S. Lape, S.KM",
           "role": "Anggota Timker",
-          "foto": "image37.jpeg"
+          "foto": "image54.jpeg"
         },
         {
           "nama": "Indhira M. Raga, S.KM",
           "role": "Anggota Timker",
-          "foto": "image38.jpeg"
+          "foto": "image55.jpeg"
         },
         {
           "nama": "Ronaldy C. H. B Tjadu Hina, S.KM",
           "role": "Anggota Timker",
-          "foto": "image39.jpeg"
+          "foto": "image56.jpeg"
         },
         {
           "nama": "Mathelda Esterina, S.KM",
           "role": "Anggota Timker",
-          "foto": "image40.jpeg"
+          "foto": "image57.jpeg"
         },
         {
           "nama": "Widiawati Batjo, A.Md.Keb",
           "role": "Anggota Timker",
-          "foto": "image41.jpeg"
+          "foto": "image58.jpeg"
         },
         {
           "nama": "Irmayasari Jamalludin, A.Md.Keb",
           "role": "Anggota Timker",
-          "foto": "image44.jpeg"
+          "foto": "image61.jpeg"
         }
       ]
     },
     "timMultimedia": {
       "title": "Tim Multimedia",
       "deskripsi": "Tim kreatif produksi audio-visual, live broadcasting YouTube, tata artistik, dan operasional teknis podcast Kanal BAPOLES.",
-      "foto": "image43.jpeg",
+      "foto": "image60.jpeg",
       "anggota": [
         "Alpredo",
         "Farhan",
@@ -195,7 +195,9 @@ window.BAPOLES_DATA = {
       "tanggal": "12 Maret 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Psikolog Klinis : Maria Imacumata M.A. Lio Dando, M.Psi.,Psikolog"
+        "Psikolog Klinis : Maria Imacumata M.A. Lio Dando, M.Psi.,Psikolog",
+        "Perawat Jiwa : Imakulata Bete, S.Kep.,Ns",
+        "Host :  Iren Garu"
       ]
     },
     {
@@ -208,7 +210,10 @@ window.BAPOLES_DATA = {
       "tanggal": "9 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Deddy, Sp.B, Subsp.Onk (K)"
+        "dr. Deddy, Sp.B, Subsp.Onk (K)",
+        "dr. Donals A. Manuain, Sp.Onk.Rad",
+        "Joyce Margriet Tibuludji, SKM, M.Kes (Penyintas kanker payudara)",
+        "Host : Helen"
       ]
     },
     {
@@ -221,7 +226,10 @@ window.BAPOLES_DATA = {
       "tanggal": "10 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Laurens David Paulus, SpOG.Subsp.Onk"
+        "dr. Laurens David Paulus, SpOG.Subsp.Onk",
+        "dr. Benny Gunawan Sp.B.Subsp.Onk(K).,M.Kes",
+        "Yuniansen Imelda F. Mella (Penyintas kanker serviks)",
+        "Host : dr. Thamara"
       ]
     },
     {
@@ -234,7 +242,10 @@ window.BAPOLES_DATA = {
       "tanggal": "13 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Jane Estherina Fransiska, Sp.PD-KHOM"
+        "dr. Jane Estherina Fransiska, Sp.PD-KHOM",
+        "Maria Martina H. Darung (YKAI perwakilan NTT)",
+        "Thieneke Mesakh (Penyintas kanker payudara)",
+        "Host : dr. Norman"
       ]
     },
     {
@@ -247,7 +258,10 @@ window.BAPOLES_DATA = {
       "tanggal": "14 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Salmawati Maryati, Sp.GK, AIFO-K"
+        "dr. Salmawati Maryati, Sp.GK, AIFO-K",
+        "Dr. apt. Ini Nyoman Yuliani, S.Si.,S.Farm., M.Si",
+        "Luisa Bertha Tio (Penyintas kanker payudara)",
+        "Host : apt. James E. Ga Bani, S.Farm"
       ]
     },
     {
@@ -260,7 +274,10 @@ window.BAPOLES_DATA = {
       "tanggal": "15 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Kevin Witmond Rebo"
+        "dr. Kevin Witmond Rebo",
+        "Adriana Luan, S.Kep.,Ns",
+        "Yustina Malur, S.K.M., M.Kes (Keluarga penyintas kanker)",
+        "Host : Tim P2PTM"
       ]
     },
     {
@@ -273,7 +290,8 @@ window.BAPOLES_DATA = {
       "tanggal": "16 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyyce Margriet Tibuludji, SKM, M.Kes (Kabid Tenaga Kesehatan)"
+        "Joyyce Margriet Tibuludji, SKM, M.Kes (Kabid Tenaga Kesehatan)",
+        "Host: Yudustira R. Kikhau, SKM, MKM (Kasie Peningkatan Mutu, Pembinaan dan Pengawasan NAKES)"
       ]
     },
     {
@@ -286,7 +304,8 @@ window.BAPOLES_DATA = {
       "tanggal": "20 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Nur Azizah, SKM, MKM"
+        "Nur Azizah, SKM, MKM",
+        "Host: Celestiana A. S. Say, S.Farm"
       ]
     },
     {
@@ -299,7 +318,10 @@ window.BAPOLES_DATA = {
       "tanggal": "23 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Helena B.S. Gomes, S.Si, Apt (Kasie Yankes Primer)"
+        "Helena B.S. Gomes, S.Si, Apt (Kasie Yankes Primer)",
+        "Agustina J. Ledoh, S.Si, Apt. M.Kes (Kasie Yankes Rujukan)",
+        "Riska Yuniatri (BPJS Cab. Kupang)",
+        "Host: Diana E. Lusi"
       ]
     },
     {
@@ -312,7 +334,9 @@ window.BAPOLES_DATA = {
       "tanggal": "4 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Damiana V. Djahari, SKM., M. Kes"
+        "Damiana V. Djahari, SKM., M. Kes",
+        "Scherly Hayer, S. Gz",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -325,7 +349,8 @@ window.BAPOLES_DATA = {
       "tanggal": "21 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Imakulata Bete, S.Kep., NS"
+        "Imakulata Bete, S.Kep., NS",
+        "Host: Ireni Garu"
       ]
     },
     {
@@ -338,7 +363,9 @@ window.BAPOLES_DATA = {
       "tanggal": "10 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Apt. Theresia Maria Wonga, S.Farm.MHIthEcPol (Apoteker RSUD W.Z Johannes Kupang)"
+        "Apt. Theresia Maria Wonga, S.Farm.MHIthEcPol (Apoteker RSUD W.Z Johannes Kupang)",
+        "Matthew Rawlins (Senior Pharmacist Antimicrobial Stewardship Fiona Stanley Hospital",
+        "Host: Secilia Lindawati Leo, S.Farm."
       ]
     },
     {
@@ -351,7 +378,9 @@ window.BAPOLES_DATA = {
       "tanggal": "11 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Lindayanti Sumali, Sp.P"
+        "dr. Lindayanti Sumali, Sp.P",
+        "Meriyanti, S.Kep.Ns",
+        "Host: Novita Moeda, S.KM"
       ]
     },
     {
@@ -364,7 +393,9 @@ window.BAPOLES_DATA = {
       "tanggal": "15 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyce M. Timbuludji, SKM, M.Kes (Kabid Nakes)"
+        "Joyce M. Timbuludji, SKM, M.Kes (Kabid Nakes)",
+        "Ronald Raya Todoboli, SKM, M.Kes (Kasie P3 Nakes)",
+        "Host: Wilan Wilhelmina"
       ]
     },
     {
@@ -377,7 +408,9 @@ window.BAPOLES_DATA = {
       "tanggal": "17 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Erma Rantela'bi.,Sp.OG (Ketua POGI NTT Periode 2025-2028)"
+        "dr. Erma Rantela'bi.,Sp.OG (Ketua POGI NTT Periode 2025-2028)",
+        "Maria Imakulata N Fatrin, S.Tr.Keb (Ketua Timker Maternal Neonatal",
+        "Host: Dwi Putri Pandara"
       ]
     },
     {
@@ -390,7 +423,8 @@ window.BAPOLES_DATA = {
       "tanggal": "18 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Aplonia Nenobais, S.Kep., Ns., M.Kep"
+        "Aplonia Nenobais, S.Kep., Ns., M.Kep",
+        "Host: Yusarmuni Reinnaty, S.Keb"
       ]
     },
     {
@@ -399,11 +433,12 @@ window.BAPOLES_DATA = {
       "materi": "Apa Itu Tuberkulosis (TB) Untuk Masyarakat NTT Yang Sehat",
       "youtubeLink": "https://youtu.be/AHxzMiWTwdE?si=GrlNl2yTBAKTT4dg",
       "youtubeId": "AHxzMiWTwdE",
-      "foto": "image14.jpeg",
+      "foto": "https://img.youtube.com/vi/AHxzMiWTwdE/hqdefault.jpg",
       "tanggal": "25 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr.Nikson E. Faaot, Sp.P.,Fisr.,F-Onk"
+        "dr.Nikson E. Faaot, Sp.P.,Fisr.,F-Onk",
+        "Host: Liontin L. Suruk, SKM"
       ]
     },
     {
@@ -416,7 +451,9 @@ window.BAPOLES_DATA = {
       "tanggal": "7 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Hendro Sius Wila Buky, S.KM, M.KM"
+        "Hendro Sius Wila Buky, S.KM, M.KM",
+        "Marcelinus Pratama Atasoge, SKM",
+        "Host: Dwi M. Susanto, SKM"
       ]
     },
     {
@@ -425,11 +462,13 @@ window.BAPOLES_DATA = {
       "materi": "CKG dalam Integrasi Layanan Primer",
       "youtubeLink": "https://www.youtube.com/live/QBPhvNmrR6M?si=0dfm53BSaRzEsXrF",
       "youtubeId": "QBPhvNmrR6M",
-      "foto": "image16.jpeg",
+      "foto": "https://img.youtube.com/vi/QBPhvNmrR6M/hqdefault.jpg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Scherly Hayer, S.Gz"
+        "Scherly Hayer, S.Gz",
+        "Donna P. Hutahean, SKM. M.Kes",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -442,7 +481,8 @@ window.BAPOLES_DATA = {
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Dennis Priscilla Setiono, Sp.KJ"
+        "dr. Dennis Priscilla Setiono, Sp.KJ",
+        "Host: Yusarmuni Reinnaty, S.Keb"
       ]
     },
     {
@@ -455,7 +495,14 @@ window.BAPOLES_DATA = {
       "tanggal": "16 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Wilfrida Marlina Ukat, SKM (Kabid P2P Kab. Malaka)"
+        "Wilfrida Marlina Ukat, SKM (Kabid P2P Kab. Malaka)",
+        "Anityya (Pengelola TB Kab. Nagekeo)",
+        "Santi (Pengelola TB Kab. Ende)",
+        "dr. Selvi (Klinik Pratama RSI Medika Kab. Alor)",
+        "Emi (Pengelola Program TB Kota Kupang)",
+        "Stef (Subkoordinator P2PM Kab. TTS)",
+        "Deris (Kepala Desa Aulesa Kab. Lembata",
+        "Host: Marianus Lino, SKM., M.Kes"
       ]
     },
     {
@@ -468,7 +515,9 @@ window.BAPOLES_DATA = {
       "tanggal": "24 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Maria Anggreini, S.Farm.,Apt, MPH"
+        "Maria Anggreini, S.Farm.,Apt, MPH",
+        "Suci Rahmawati",
+        "Host: Maria F. Bukan, SKM, MKM"
       ]
     },
     {
@@ -481,7 +530,9 @@ window.BAPOLES_DATA = {
       "tanggal": "27 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Maratina D. Widayani, SKM"
+        "Maratina D. Widayani, SKM",
+        "dr. Ajra Fitri",
+        "Host: Jasintha I. G. W. Ngongo, SKM, M.Kes"
       ]
     },
     {
@@ -494,7 +545,8 @@ window.BAPOLES_DATA = {
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Nina Keraf, Sp.PD"
+        "dr. Nina Keraf, Sp.PD",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -507,7 +559,9 @@ window.BAPOLES_DATA = {
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Ruth D. Laiskodat, S.Si, Apt., MM"
+        "Ruth D. Laiskodat, S.Si, Apt., MM",
+        "Pdt. Gustaf Nenu (Pendeta GMIT Oevert, Fatululat, Amfoang Selatan",
+        "Host: Raymundus V. Umbu Dagha, S.KM"
       ]
     },
     {
@@ -516,11 +570,12 @@ window.BAPOLES_DATA = {
       "materi": "Bantuan Hidup Dasar (BHD) Langkah Cepat Menyelamatkan Nyawa",
       "youtubeLink": "https://www.youtube.com/live/zZumYi52Ob4?si=dayjT4FAyMwvyPpn",
       "youtubeId": "zZumYi52Ob4",
-      "foto": "image23.jpeg",
+      "foto": "https://img.youtube.com/vi/zZumYi52Ob4/hqdefault.jpg",
       "tanggal": "30 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Andre Sinambela, Sp.EM"
+        "dr. Andre Sinambela, Sp.EM",
+        "Host: Ryska Sine"
       ]
     },
     {
@@ -533,7 +588,9 @@ window.BAPOLES_DATA = {
       "tanggal": "31 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Hermina R. Legimakani, S.Kep,Ners, MPH"
+        "Hermina R. Legimakani, S.Kep,Ners, MPH",
+        "Ni Komang Nesawati, SKM, M.Kes",
+        "Host: Rayana Saragih, ST"
       ]
     },
     {
@@ -546,7 +603,10 @@ window.BAPOLES_DATA = {
       "tanggal": "7 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyce M. Timbuludji, SKM, M.Kes"
+        "Joyce M. Timbuludji, SKM, M.Kes",
+        "dr. Y.T. Kusumawardhani",
+        "dr. Hery Bertus, MARS",
+        "Host: Yusdistira R. Kikhau, SKM.,MKM"
       ]
     },
     {
@@ -559,7 +619,10 @@ window.BAPOLES_DATA = {
       "tanggal": "11 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Reynnard A. Koenunu (Pembimbing)"
+        "Reynnard A. Koenunu (Pembimbing)",
+        "Daren B.C. Tahun (Ketua Peneliti)",
+        "Theresia C. Rea (Anggota Peneliti)",
+        "Host: Secilia Lindawati Leo, S.Farm."
       ]
     },
     {
@@ -572,7 +635,10 @@ window.BAPOLES_DATA = {
       "tanggal": "2 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "drg. Tirza Vita Fomeni (Kepala Puskesmas Oesao)"
+        "drg. Tirza Vita Fomeni (Kepala Puskesmas Oesao)",
+        "Ruth D. Laiskodat, S.Si, Apt., MM (Kepala Dinas Kesehatan Provinsi NTT)",
+        "Harlini Syafaria Huru Ludil, S.Kep.,Ns",
+        "Host: Raymondus V. U. Dagha, SKM"
       ]
     },
     {
@@ -585,7 +651,275 @@ window.BAPOLES_DATA = {
       "tanggal": "16 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Benny Gunawan, Sp.B., Sub.Sp.Onk (K)"
+        "dr. Benny Gunawan, Sp.B., Sub.Sp.Onk (K)",
+        "Host: dr. Norman, S.Ked., M.KM"
+      ]
+    },
+    {
+      "no": 32,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai Barat",
+      "youtubeLink": "https://www.youtube.com/live/eE4Fownr8vk?si=XUNqiPFVxCLfO9IT",
+      "youtubeId": "eE4Fownr8vk",
+      "foto": "image35.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Sutarmi, A.Md.KL",
+        "Yoce Rosmiyati Nubatonis, SKM",
+        "Host: Dwi Meyshi Susanto, SKM"
+      ]
+    },
+    {
+      "no": 33,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai Timur",
+      "youtubeLink": "https://www.youtube.com/live/5krH0QDaHtE?si=msD-tUu-RsPoqE93",
+      "youtubeId": "5krH0QDaHtE",
+      "foto": "image36.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Apris Lemo Isu, SKM,M.Kes",
+        "Yudi Hartanto",
+        "Host: William Alberto Baitanu"
+      ]
+    },
+    {
+      "no": 34,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "Tim Pendamping Psikologis Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/y9op6Ik0DvI?si=FhK_Vc5tx0h7FdGX",
+      "youtubeId": "y9op6Ik0DvI",
+      "foto": "image37.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Imakulata Bete, S.Kep., NS",
+        "Host: Yusarmuni Reinnaty, S.Keb"
+      ]
+    },
+    {
+      "no": 35,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai Barat",
+      "youtubeLink": "https://www.youtube.com/live/k2ifgsREV1U?si=dX7G7oWjsryEqDFK",
+      "youtubeId": "k2ifgsREV1U",
+      "foto": "image38.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Evy Linda Tata, SKM",
+        "Host: Maria Antonia Loti Kelen, SKM"
+      ]
+    },
+    {
+      "no": 36,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai Timur",
+      "youtubeLink": "https://www.youtube.com/live/scqu4JGndRg?si=kuYksHJbAB12jixQ",
+      "youtubeId": "scqu4JGndRg",
+      "foto": "image31.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Fransiskus R. Taso, S.KM",
+        "Raisul H. Ahmad, S.Kom",
+        "Matilda L. Sari, S.KM",
+        "Host: Awanda Berlianti"
+      ]
+    },
+    {
+      "no": 37,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "MENJAGA KESEHATAN MENTAL DI TENGAH DAN SETELAH BENCANA ALAM",
+      "youtubeLink": "https://www.youtube.com/live/AAVwaogvKuY?si=pi46rHmM-jEDN3i6",
+      "youtubeId": "AAVwaogvKuY",
+      "foto": "image39.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Djendri Tausbele, S.Kep, Ns",
+        "JustiantiNubatonis, A.Md.Kep",
+        "Host: Ireni Garu"
+      ]
+    },
+    {
+      "no": 38,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Ende",
+      "youtubeLink": "https://www.youtube.com/live/u3ni9usSweU?si=p2uf9Z5EMMu1LQPf",
+      "youtubeId": "u3ni9usSweU",
+      "foto": "image29.jpeg",
+      "tanggal": "4 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Marsalina Selan, A.Md.Gz",
+        "Indhira M. Raga, SKM",
+        "Yersi Eunike A. Bunda",
+        "Host: Istonia H.Waang, SKM.MKM"
+      ]
+    },
+    {
+      "no": 39,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Ende",
+      "youtubeLink": "https://www.youtube.com/live/Cy9vdDMT94k?si=2uiZa3w2VGZ-4b8u",
+      "youtubeId": "Cy9vdDMT94k",
+      "foto": "image40.jpeg",
+      "tanggal": "4 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Andre M.Paliama, A.Md.KL",
+        "Silvyana Eka Melinda Mali",
+        "Matheos Wilem Pello, SKM",
+        "Sri Sofiani Mohamad Saleh",
+        "Host: Anjani Kumala Dewi"
+      ]
+    },
+    {
+      "no": 40,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "PULIH BERSAMA MENGUATKAN MENTAL, MENUMBUHKAN HARAPAN, BANGKIT SETELAH BENCANA",
+      "youtubeLink": "https://www.youtube.com/live/OwtFiO-f23g?si=r_ZV4_UzHbmvVUZW",
+      "youtubeId": "OwtFiO-f23g",
+      "foto": "image41.jpeg",
+      "tanggal": "5 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Fransiska Rando, A.Md.Kep",
+        "Yessy Heryari, A.Md.Kep",
+        "Host: Iren Garu"
+      ]
+    },
+    {
+      "no": 41,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Sikka",
+      "youtubeLink": "https://www.youtube.com/live/pmNUg4gQXO8?si=ApT7J4LkMihNTrE_",
+      "youtubeId": "pmNUg4gQXO8",
+      "foto": "image33.jpeg",
+      "tanggal": "5 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Reinhard Radja Riwoe, SKM",
+        "Alfa Daniela Tassi",
+        "Daniella Reny Dae Panie",
+        "Merdiana Upa Radji",
+        "Host: Febiola R. Murdolelono"
+      ]
+    },
+    {
+      "no": 42,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Nagekeo",
+      "youtubeLink": "https://www.youtube.com/live/-ENaI_a0gCU?si=4OX5ptj7kFwpCbib",
+      "youtubeId": "-ENaI_a0gCU",
+      "foto": "image42.jpeg",
+      "tanggal": "6 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Filmon M. Banunaek, S.Kom., M.M",
+        "Robertus Antonius Akoit, ST, M.Kes",
+        "Roberto Julianto Yoseph Tasau, A.Md.Gz",
+        "Host: Sri Jayanti Wahyuni Adang Djaha"
+      ]
+    },
+    {
+      "no": 43,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/_HsN3pFxu60?si=7hTX-bGWS2Z4ZErU",
+      "youtubeId": "_HsN3pFxu60",
+      "foto": "image43.jpeg",
+      "tanggal": "7 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Maratina Diska Widayani,SKM",
+        "Evidio Marleta Prima Bere",
+        "Rafael Daniel Naru",
+        "Yamres Elison Manekun, S.H.",
+        "Host: Elisabeth M.A. Mbata,SKM"
+      ]
+    },
+    {
+      "no": 44,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/0uUWFyFp6_w?si=9Uf1YlKQwMJgddbC",
+      "youtubeId": "0uUWFyFp6_w",
+      "foto": "image32.jpeg",
+      "tanggal": "8 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Scherly Hayer,S.Gz",
+        "Yorri A. Ottu, A.Md.Keb",
+        "Host: Helen S. Lape, S.KM"
+      ]
+    },
+    {
+      "no": 45,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Nagekeo",
+      "youtubeLink": "https://www.youtube.com/live/ss7nSCX9m5Y?si=XmsiIbSD58h6qUyO",
+      "youtubeId": "ss7nSCX9m5Y",
+      "foto": "image44.jpeg",
+      "tanggal": "8 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Maria Y.V. Mau Leon, SKM",
+        "Amina H.Baun,SKM",
+        "Host: Febriani Syafitri Lusia Lado"
+      ]
+    },
+    {
+      "no": 46,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Sikka",
+      "youtubeLink": "https://www.youtube.com/live/nNi-XNMibEs?si=iQ3nhlEsGZvoIYkT",
+      "youtubeId": "nNi-XNMibEs",
+      "foto": "image34.jpeg",
+      "tanggal": "9 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Ni Made Oka Arpini Kasuma, SP, M.Kes",
+        "Elisabeth Paula Kedang",
+        "Rossa Apriani S.Aninfeto",
+        "Aloys Meno",
+        "Host: Vani Wahyuning Putri"
+      ]
+    },
+    {
+      "no": 47,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai",
+      "youtubeLink": "https://www.youtube.com/live/OYw8-JfyV5s?si=abB2zB7BhFSlCPn9",
+      "youtubeId": "OYw8-JfyV5s",
+      "foto": "image45.jpeg",
+      "tanggal": "9 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "⁠Martinus Mauk Bria",
+        "Stefanie Gracia Bale, S.KM",
+        "⁠Rahayu Chandranita Rini, SKM",
+        "Host: Bungsu Adimart Zina, SKM, MPH"
+      ]
+    },
+    {
+      "no": 48,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai",
+      "youtubeLink": "https://www.youtube.com/live/ztTQGBienFs?si=A0YgSPWkIiISftQG",
+      "youtubeId": "ztTQGBienFs",
+      "foto": "image30.jpeg",
+      "tanggal": "10 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Vinelda M. Wetangterah, S.KM",
+        "Farah Murwitasari, A.Md.Kes",
+        "Aditya Nugroho Saputro",
+        "Scolasticha Herlofina Lanang",
+        "Host: Dian A. H. Eby Kawa"
       ]
     }
   ],
@@ -600,7 +934,9 @@ window.BAPOLES_DATA = {
       "tanggal": "12 Maret 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Psikolog Klinis : Maria Imacumata M.A. Lio Dando, M.Psi.,Psikolog"
+        "Psikolog Klinis : Maria Imacumata M.A. Lio Dando, M.Psi.,Psikolog",
+        "Perawat Jiwa : Imakulata Bete, S.Kep.,Ns",
+        "Host :  Iren Garu"
       ]
     },
     {
@@ -613,7 +949,10 @@ window.BAPOLES_DATA = {
       "tanggal": "9 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Deddy, Sp.B, Subsp.Onk (K)"
+        "dr. Deddy, Sp.B, Subsp.Onk (K)",
+        "dr. Donals A. Manuain, Sp.Onk.Rad",
+        "Joyce Margriet Tibuludji, SKM, M.Kes (Penyintas kanker payudara)",
+        "Host : Helen"
       ]
     },
     {
@@ -626,7 +965,10 @@ window.BAPOLES_DATA = {
       "tanggal": "10 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Laurens David Paulus, SpOG.Subsp.Onk"
+        "dr. Laurens David Paulus, SpOG.Subsp.Onk",
+        "dr. Benny Gunawan Sp.B.Subsp.Onk(K).,M.Kes",
+        "Yuniansen Imelda F. Mella (Penyintas kanker serviks)",
+        "Host : dr. Thamara"
       ]
     },
     {
@@ -639,7 +981,10 @@ window.BAPOLES_DATA = {
       "tanggal": "13 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Jane Estherina Fransiska, Sp.PD-KHOM"
+        "dr. Jane Estherina Fransiska, Sp.PD-KHOM",
+        "Maria Martina H. Darung (YKAI perwakilan NTT)",
+        "Thieneke Mesakh (Penyintas kanker payudara)",
+        "Host : dr. Norman"
       ]
     },
     {
@@ -652,7 +997,10 @@ window.BAPOLES_DATA = {
       "tanggal": "14 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Salmawati Maryati, Sp.GK, AIFO-K"
+        "dr. Salmawati Maryati, Sp.GK, AIFO-K",
+        "Dr. apt. Ini Nyoman Yuliani, S.Si.,S.Farm., M.Si",
+        "Luisa Bertha Tio (Penyintas kanker payudara)",
+        "Host : apt. James E. Ga Bani, S.Farm"
       ]
     },
     {
@@ -665,7 +1013,10 @@ window.BAPOLES_DATA = {
       "tanggal": "15 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Kevin Witmond Rebo"
+        "dr. Kevin Witmond Rebo",
+        "Adriana Luan, S.Kep.,Ns",
+        "Yustina Malur, S.K.M., M.Kes (Keluarga penyintas kanker)",
+        "Host : Tim P2PTM"
       ]
     },
     {
@@ -678,7 +1029,8 @@ window.BAPOLES_DATA = {
       "tanggal": "16 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyyce Margriet Tibuludji, SKM, M.Kes (Kabid Tenaga Kesehatan)"
+        "Joyyce Margriet Tibuludji, SKM, M.Kes (Kabid Tenaga Kesehatan)",
+        "Host: Yudustira R. Kikhau, SKM, MKM (Kasie Peningkatan Mutu, Pembinaan dan Pengawasan NAKES)"
       ]
     },
     {
@@ -691,7 +1043,8 @@ window.BAPOLES_DATA = {
       "tanggal": "20 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Nur Azizah, SKM, MKM"
+        "Nur Azizah, SKM, MKM",
+        "Host: Celestiana A. S. Say, S.Farm"
       ]
     },
     {
@@ -704,7 +1057,10 @@ window.BAPOLES_DATA = {
       "tanggal": "23 April 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Helena B.S. Gomes, S.Si, Apt (Kasie Yankes Primer)"
+        "Helena B.S. Gomes, S.Si, Apt (Kasie Yankes Primer)",
+        "Agustina J. Ledoh, S.Si, Apt. M.Kes (Kasie Yankes Rujukan)",
+        "Riska Yuniatri (BPJS Cab. Kupang)",
+        "Host: Diana E. Lusi"
       ]
     },
     {
@@ -717,7 +1073,9 @@ window.BAPOLES_DATA = {
       "tanggal": "4 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Damiana V. Djahari, SKM., M. Kes"
+        "Damiana V. Djahari, SKM., M. Kes",
+        "Scherly Hayer, S. Gz",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -730,7 +1088,8 @@ window.BAPOLES_DATA = {
       "tanggal": "21 Mei 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Imakulata Bete, S.Kep., NS"
+        "Imakulata Bete, S.Kep., NS",
+        "Host: Ireni Garu"
       ]
     },
     {
@@ -743,7 +1102,9 @@ window.BAPOLES_DATA = {
       "tanggal": "10 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Apt. Theresia Maria Wonga, S.Farm.MHIthEcPol (Apoteker RSUD W.Z Johannes Kupang)"
+        "Apt. Theresia Maria Wonga, S.Farm.MHIthEcPol (Apoteker RSUD W.Z Johannes Kupang)",
+        "Matthew Rawlins (Senior Pharmacist Antimicrobial Stewardship Fiona Stanley Hospital",
+        "Host: Secilia Lindawati Leo, S.Farm."
       ]
     },
     {
@@ -756,7 +1117,9 @@ window.BAPOLES_DATA = {
       "tanggal": "11 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Lindayanti Sumali, Sp.P"
+        "dr. Lindayanti Sumali, Sp.P",
+        "Meriyanti, S.Kep.Ns",
+        "Host: Novita Moeda, S.KM"
       ]
     },
     {
@@ -769,7 +1132,9 @@ window.BAPOLES_DATA = {
       "tanggal": "15 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyce M. Timbuludji, SKM, M.Kes (Kabid Nakes)"
+        "Joyce M. Timbuludji, SKM, M.Kes (Kabid Nakes)",
+        "Ronald Raya Todoboli, SKM, M.Kes (Kasie P3 Nakes)",
+        "Host: Wilan Wilhelmina"
       ]
     },
     {
@@ -782,7 +1147,9 @@ window.BAPOLES_DATA = {
       "tanggal": "17 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Erma Rantela'bi.,Sp.OG (Ketua POGI NTT Periode 2025-2028)"
+        "dr. Erma Rantela'bi.,Sp.OG (Ketua POGI NTT Periode 2025-2028)",
+        "Maria Imakulata N Fatrin, S.Tr.Keb (Ketua Timker Maternal Neonatal",
+        "Host: Dwi Putri Pandara"
       ]
     },
     {
@@ -795,7 +1162,8 @@ window.BAPOLES_DATA = {
       "tanggal": "18 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Aplonia Nenobais, S.Kep., Ns., M.Kep"
+        "Aplonia Nenobais, S.Kep., Ns., M.Kep",
+        "Host: Yusarmuni Reinnaty, S.Keb"
       ]
     },
     {
@@ -804,11 +1172,12 @@ window.BAPOLES_DATA = {
       "materi": "Apa Itu Tuberkulosis (TB) Untuk Masyarakat NTT Yang Sehat",
       "youtubeLink": "https://youtu.be/AHxzMiWTwdE?si=GrlNl2yTBAKTT4dg",
       "youtubeId": "AHxzMiWTwdE",
-      "foto": "image14.jpeg",
+      "foto": "https://img.youtube.com/vi/AHxzMiWTwdE/hqdefault.jpg",
       "tanggal": "25 Juni 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr.Nikson E. Faaot, Sp.P.,Fisr.,F-Onk"
+        "dr.Nikson E. Faaot, Sp.P.,Fisr.,F-Onk",
+        "Host: Liontin L. Suruk, SKM"
       ]
     },
     {
@@ -821,7 +1190,9 @@ window.BAPOLES_DATA = {
       "tanggal": "7 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Hendro Sius Wila Buky, S.KM, M.KM"
+        "Hendro Sius Wila Buky, S.KM, M.KM",
+        "Marcelinus Pratama Atasoge, SKM",
+        "Host: Dwi M. Susanto, SKM"
       ]
     },
     {
@@ -830,11 +1201,13 @@ window.BAPOLES_DATA = {
       "materi": "CKG dalam Integrasi Layanan Primer",
       "youtubeLink": "https://www.youtube.com/live/QBPhvNmrR6M?si=0dfm53BSaRzEsXrF",
       "youtubeId": "QBPhvNmrR6M",
-      "foto": "image16.jpeg",
+      "foto": "https://img.youtube.com/vi/QBPhvNmrR6M/hqdefault.jpg",
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Scherly Hayer, S.Gz"
+        "Scherly Hayer, S.Gz",
+        "Donna P. Hutahean, SKM. M.Kes",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -847,7 +1220,8 @@ window.BAPOLES_DATA = {
       "tanggal": "13 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Dennis Priscilla Setiono, Sp.KJ"
+        "dr. Dennis Priscilla Setiono, Sp.KJ",
+        "Host: Yusarmuni Reinnaty, S.Keb"
       ]
     },
     {
@@ -860,7 +1234,14 @@ window.BAPOLES_DATA = {
       "tanggal": "16 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Wilfrida Marlina Ukat, SKM (Kabid P2P Kab. Malaka)"
+        "Wilfrida Marlina Ukat, SKM (Kabid P2P Kab. Malaka)",
+        "Anityya (Pengelola TB Kab. Nagekeo)",
+        "Santi (Pengelola TB Kab. Ende)",
+        "dr. Selvi (Klinik Pratama RSI Medika Kab. Alor)",
+        "Emi (Pengelola Program TB Kota Kupang)",
+        "Stef (Subkoordinator P2PM Kab. TTS)",
+        "Deris (Kepala Desa Aulesa Kab. Lembata",
+        "Host: Marianus Lino, SKM., M.Kes"
       ]
     },
     {
@@ -873,7 +1254,9 @@ window.BAPOLES_DATA = {
       "tanggal": "24 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Maria Anggreini, S.Farm.,Apt, MPH"
+        "Maria Anggreini, S.Farm.,Apt, MPH",
+        "Suci Rahmawati",
+        "Host: Maria F. Bukan, SKM, MKM"
       ]
     },
     {
@@ -886,7 +1269,9 @@ window.BAPOLES_DATA = {
       "tanggal": "27 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Maratina D. Widayani, SKM"
+        "Maratina D. Widayani, SKM",
+        "dr. Ajra Fitri",
+        "Host: Jasintha I. G. W. Ngongo, SKM, M.Kes"
       ]
     },
     {
@@ -899,7 +1284,8 @@ window.BAPOLES_DATA = {
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Nina Keraf, Sp.PD"
+        "dr. Nina Keraf, Sp.PD",
+        "Host: Ni Made Oka Arpini Kasuma, SP., M.Kes"
       ]
     },
     {
@@ -912,7 +1298,9 @@ window.BAPOLES_DATA = {
       "tanggal": "28 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Ruth D. Laiskodat, S.Si, Apt., MM"
+        "Ruth D. Laiskodat, S.Si, Apt., MM",
+        "Pdt. Gustaf Nenu (Pendeta GMIT Oevert, Fatululat, Amfoang Selatan",
+        "Host: Raymundus V. Umbu Dagha, S.KM"
       ]
     },
     {
@@ -921,11 +1309,12 @@ window.BAPOLES_DATA = {
       "materi": "Bantuan Hidup Dasar (BHD) Langkah Cepat Menyelamatkan Nyawa",
       "youtubeLink": "https://www.youtube.com/live/zZumYi52Ob4?si=dayjT4FAyMwvyPpn",
       "youtubeId": "zZumYi52Ob4",
-      "foto": "image23.jpeg",
+      "foto": "https://img.youtube.com/vi/zZumYi52Ob4/hqdefault.jpg",
       "tanggal": "30 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Andre Sinambela, Sp.EM"
+        "dr. Andre Sinambela, Sp.EM",
+        "Host: Ryska Sine"
       ]
     },
     {
@@ -938,7 +1327,9 @@ window.BAPOLES_DATA = {
       "tanggal": "31 Juli 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Hermina R. Legimakani, S.Kep,Ners, MPH"
+        "Hermina R. Legimakani, S.Kep,Ners, MPH",
+        "Ni Komang Nesawati, SKM, M.Kes",
+        "Host: Rayana Saragih, ST"
       ]
     },
     {
@@ -951,7 +1342,10 @@ window.BAPOLES_DATA = {
       "tanggal": "7 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Joyce M. Timbuludji, SKM, M.Kes"
+        "Joyce M. Timbuludji, SKM, M.Kes",
+        "dr. Y.T. Kusumawardhani",
+        "dr. Hery Bertus, MARS",
+        "Host: Yusdistira R. Kikhau, SKM.,MKM"
       ]
     },
     {
@@ -964,7 +1358,10 @@ window.BAPOLES_DATA = {
       "tanggal": "11 Agustus 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "Reynnard A. Koenunu (Pembimbing)"
+        "Reynnard A. Koenunu (Pembimbing)",
+        "Daren B.C. Tahun (Ketua Peneliti)",
+        "Theresia C. Rea (Anggota Peneliti)",
+        "Host: Secilia Lindawati Leo, S.Farm."
       ]
     },
     {
@@ -977,7 +1374,10 @@ window.BAPOLES_DATA = {
       "tanggal": "2 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "drg. Tirza Vita Fomeni (Kepala Puskesmas Oesao)"
+        "drg. Tirza Vita Fomeni (Kepala Puskesmas Oesao)",
+        "Ruth D. Laiskodat, S.Si, Apt., MM (Kepala Dinas Kesehatan Provinsi NTT)",
+        "Harlini Syafaria Huru Ludil, S.Kep.,Ns",
+        "Host: Raymondus V. U. Dagha, SKM"
       ]
     },
     {
@@ -990,7 +1390,275 @@ window.BAPOLES_DATA = {
       "tanggal": "16 Oktober 2026",
       "waktu": "09.00 - 11.00 WITA",
       "narasumber": [
-        "dr. Benny Gunawan, Sp.B., Sub.Sp.Onk (K)"
+        "dr. Benny Gunawan, Sp.B., Sub.Sp.Onk (K)",
+        "Host: dr. Norman, S.Ked., M.KM"
+      ]
+    },
+    {
+      "no": 32,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai Barat",
+      "youtubeLink": "https://www.youtube.com/live/eE4Fownr8vk?si=XUNqiPFVxCLfO9IT",
+      "youtubeId": "eE4Fownr8vk",
+      "foto": "image35.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Sutarmi, A.Md.KL",
+        "Yoce Rosmiyati Nubatonis, SKM",
+        "Host: Dwi Meyshi Susanto, SKM"
+      ]
+    },
+    {
+      "no": 33,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai Timur",
+      "youtubeLink": "https://www.youtube.com/live/5krH0QDaHtE?si=msD-tUu-RsPoqE93",
+      "youtubeId": "5krH0QDaHtE",
+      "foto": "image36.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Apris Lemo Isu, SKM,M.Kes",
+        "Yudi Hartanto",
+        "Host: William Alberto Baitanu"
+      ]
+    },
+    {
+      "no": 34,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "Tim Pendamping Psikologis Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/y9op6Ik0DvI?si=FhK_Vc5tx0h7FdGX",
+      "youtubeId": "y9op6Ik0DvI",
+      "foto": "image37.jpeg",
+      "tanggal": "2 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Imakulata Bete, S.Kep., NS",
+        "Host: Yusarmuni Reinnaty, S.Keb"
+      ]
+    },
+    {
+      "no": 35,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai Barat",
+      "youtubeLink": "https://www.youtube.com/live/k2ifgsREV1U?si=dX7G7oWjsryEqDFK",
+      "youtubeId": "k2ifgsREV1U",
+      "foto": "image38.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Evy Linda Tata, SKM",
+        "Host: Maria Antonia Loti Kelen, SKM"
+      ]
+    },
+    {
+      "no": 36,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai Timur",
+      "youtubeLink": "https://www.youtube.com/live/scqu4JGndRg?si=kuYksHJbAB12jixQ",
+      "youtubeId": "scqu4JGndRg",
+      "foto": "image31.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Fransiskus R. Taso, S.KM",
+        "Raisul H. Ahmad, S.Kom",
+        "Matilda L. Sari, S.KM",
+        "Host: Awanda Berlianti"
+      ]
+    },
+    {
+      "no": 37,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "MENJAGA KESEHATAN MENTAL DI TENGAH DAN SETELAH BENCANA ALAM",
+      "youtubeLink": "https://www.youtube.com/live/AAVwaogvKuY?si=pi46rHmM-jEDN3i6",
+      "youtubeId": "AAVwaogvKuY",
+      "foto": "image39.jpeg",
+      "tanggal": "3 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Djendri Tausbele, S.Kep, Ns",
+        "JustiantiNubatonis, A.Md.Kep",
+        "Host: Ireni Garu"
+      ]
+    },
+    {
+      "no": 38,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Ende",
+      "youtubeLink": "https://www.youtube.com/live/u3ni9usSweU?si=p2uf9Z5EMMu1LQPf",
+      "youtubeId": "u3ni9usSweU",
+      "foto": "image29.jpeg",
+      "tanggal": "4 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Marsalina Selan, A.Md.Gz",
+        "Indhira M. Raga, SKM",
+        "Yersi Eunike A. Bunda",
+        "Host: Istonia H.Waang, SKM.MKM"
+      ]
+    },
+    {
+      "no": 39,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Ende",
+      "youtubeLink": "https://www.youtube.com/live/Cy9vdDMT94k?si=2uiZa3w2VGZ-4b8u",
+      "youtubeId": "Cy9vdDMT94k",
+      "foto": "image40.jpeg",
+      "tanggal": "4 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Andre M.Paliama, A.Md.KL",
+        "Silvyana Eka Melinda Mali",
+        "Matheos Wilem Pello, SKM",
+        "Sri Sofiani Mohamad Saleh",
+        "Host: Anjani Kumala Dewi"
+      ]
+    },
+    {
+      "no": 40,
+      "kategori": "RSKD Jiwa Naimata",
+      "materi": "PULIH BERSAMA MENGUATKAN MENTAL, MENUMBUHKAN HARAPAN, BANGKIT SETELAH BENCANA",
+      "youtubeLink": "https://www.youtube.com/live/OwtFiO-f23g?si=r_ZV4_UzHbmvVUZW",
+      "youtubeId": "OwtFiO-f23g",
+      "foto": "image41.jpeg",
+      "tanggal": "5 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Fransiska Rando, A.Md.Kep",
+        "Yessy Heryari, A.Md.Kep",
+        "Host: Iren Garu"
+      ]
+    },
+    {
+      "no": 41,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Sikka",
+      "youtubeLink": "https://www.youtube.com/live/pmNUg4gQXO8?si=ApT7J4LkMihNTrE_",
+      "youtubeId": "pmNUg4gQXO8",
+      "foto": "image33.jpeg",
+      "tanggal": "5 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Reinhard Radja Riwoe, SKM",
+        "Alfa Daniela Tassi",
+        "Daniella Reny Dae Panie",
+        "Merdiana Upa Radji",
+        "Host: Febiola R. Murdolelono"
+      ]
+    },
+    {
+      "no": 42,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Nagekeo",
+      "youtubeLink": "https://www.youtube.com/live/-ENaI_a0gCU?si=4OX5ptj7kFwpCbib",
+      "youtubeId": "-ENaI_a0gCU",
+      "foto": "image42.jpeg",
+      "tanggal": "6 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Filmon M. Banunaek, S.Kom., M.M",
+        "Robertus Antonius Akoit, ST, M.Kes",
+        "Roberto Julianto Yoseph Tasau, A.Md.Gz",
+        "Host: Sri Jayanti Wahyuni Adang Djaha"
+      ]
+    },
+    {
+      "no": 43,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/_HsN3pFxu60?si=7hTX-bGWS2Z4ZErU",
+      "youtubeId": "_HsN3pFxu60",
+      "foto": "image43.jpeg",
+      "tanggal": "7 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Maratina Diska Widayani,SKM",
+        "Evidio Marleta Prima Bere",
+        "Rafael Daniel Naru",
+        "Yamres Elison Manekun, S.H.",
+        "Host: Elisabeth M.A. Mbata,SKM"
+      ]
+    },
+    {
+      "no": 44,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Ngada",
+      "youtubeLink": "https://www.youtube.com/live/0uUWFyFp6_w?si=9Uf1YlKQwMJgddbC",
+      "youtubeId": "0uUWFyFp6_w",
+      "foto": "image32.jpeg",
+      "tanggal": "8 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Scherly Hayer,S.Gz",
+        "Yorri A. Ottu, A.Md.Keb",
+        "Host: Helen S. Lape, S.KM"
+      ]
+    },
+    {
+      "no": 45,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Nagekeo",
+      "youtubeLink": "https://www.youtube.com/live/ss7nSCX9m5Y?si=XmsiIbSD58h6qUyO",
+      "youtubeId": "ss7nSCX9m5Y",
+      "foto": "image44.jpeg",
+      "tanggal": "8 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Maria Y.V. Mau Leon, SKM",
+        "Amina H.Baun,SKM",
+        "Host: Febriani Syafitri Lusia Lado"
+      ]
+    },
+    {
+      "no": 46,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Sikka",
+      "youtubeLink": "https://www.youtube.com/live/nNi-XNMibEs?si=iQ3nhlEsGZvoIYkT",
+      "youtubeId": "nNi-XNMibEs",
+      "foto": "image34.jpeg",
+      "tanggal": "9 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Ni Made Oka Arpini Kasuma, SP, M.Kes",
+        "Elisabeth Paula Kedang",
+        "Rossa Apriani S.Aninfeto",
+        "Aloys Meno",
+        "Host: Vani Wahyuning Putri"
+      ]
+    },
+    {
+      "no": 47,
+      "kategori": "Mitra",
+      "materi": "Tim Penyelidikan Epidemiologi Kabupaten Manggarai",
+      "youtubeLink": "https://www.youtube.com/live/OYw8-JfyV5s?si=abB2zB7BhFSlCPn9",
+      "youtubeId": "OYw8-JfyV5s",
+      "foto": "image45.jpeg",
+      "tanggal": "9 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "⁠Martinus Mauk Bria",
+        "Stefanie Gracia Bale, S.KM",
+        "⁠Rahayu Chandranita Rini, SKM",
+        "Host: Bungsu Adimart Zina, SKM, MPH"
+      ]
+    },
+    {
+      "no": 48,
+      "kategori": "Mitra",
+      "materi": "Tim Pendamping Heoc Kabupaten Manggarai",
+      "youtubeLink": "https://www.youtube.com/live/ztTQGBienFs?si=A0YgSPWkIiISftQG",
+      "youtubeId": "ztTQGBienFs",
+      "foto": "image30.jpeg",
+      "tanggal": "10 November 2026",
+      "waktu": "09.00 - 11.00 WITA",
+      "narasumber": [
+        "Vinelda M. Wetangterah, S.KM",
+        "Farah Murwitasari, A.Md.Kes",
+        "Aditya Nugroho Saputro",
+        "Scolasticha Herlofina Lanang",
+        "Host: Dian A. H. Eby Kawa"
       ]
     }
   ],
@@ -1012,3 +1680,6 @@ window.BAPOLES_DATA = {
     "Website": "dinaskesehatan.nttprov.go.id"
   }
 };
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = window.BAPOLES_DATA;
+}
